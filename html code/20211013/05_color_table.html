@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표에 색 입히기</title>
+</head>
+<body>
+    <table border="1">
+        <caption>테이블 캡션</caption>
+        <colgroup>
+            <col span="2" style="background-color: red;">
+            <col style="background-color: blue;">
+        </colgroup>
+        <!-- 5행 3열 테이블 만들기 -->
+        <thead style="background: green;">
+            <tr>
+                <th>제목</th>
+                <th>제목</th>
+                <th>제목</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- alt+ 클릭 : 다중선택 -->
+            <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            </tr>
+            <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            </tr>
+            <tr>
+            <td>데이터</td>
+            <td>데이터</td>
+            <td>데이터</td>
+            </tr>
+        </tbody>
+        <tfoot style="background: yellow;">
+            <tr>
+            <td>아래쪽</td>
+            <td>아래쪽</td>
+            <td>아래쪽</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
