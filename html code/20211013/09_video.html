@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- controls 안써주면 재생이 안됨 -->
+    <video src="Cat - 66004.mp4" controls autoplay muted></video>
+
+    <video controls width="640px" height="360px">
+    <source src="Highland Cows - 65903.mp4" type=video/mp4>
+    </video>
+
+    <!-- 동영상 재생하기전 미리 보여지는 그림(썸넬) -->
+ <!-- <video poster="사진이름.jpg" controls width="640px" height="360px"> -->
+    <video controls width="640px" height="360px">
+        <source src="Highland Cows - 65903.mp4" type=video/mp4>
+        </video>
+
+        <!-- 웹사이트 켜자마자 동영상이 재생되게 하기 -->
+        <!-- autoplay 사용하기 -->
+        <!-- 크롬에서는 절대 자동재생X 파이어폭스같은곳은 일정 크기 이하일 경우 자동재생O -->
+        <video controls width="640px" height="360px" autoplay>
+            <source src="Highland Cows - 65903.mp4" type=video/mp4>
+            </video>
+    <!-- 음소거 -->
+    <!-- muted하면 됨 -->
+</body>
+</html>
