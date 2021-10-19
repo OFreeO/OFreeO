@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 자손이란? 바로 안쪽에 있는 태그 안쪽의 안쪽부터 후손임 */
+        /* 바로 안쪽에 있는 태그도 후손에 속하기는함 (즉 자손이자 후손) */
+        /* 그런데 안쪽의 안쪽부터는 무조건 후손임 */
+        #header>h1{color:red}
+        #section>h1{color: orange;}
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        <h1 class="title">Lorem, ipsum.</h1>
+        <div id="nav">
+            <h1>Navi</h1><!-- id가 header인 태그의 후손이나 자손은 아님-->
+        </div>
+
+        <h1>응애</h1>
+
+    </div>
+    <div id="section">
+        <h1 class="title">Lorem, ipsum.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non expedita laboriosam assumenda quia, cumque ad
+            doloribus libero. Amet officia voluptatum, aperiam officiis numquam illum, veritatis cupiditate
+            exercitationem atque eius iusto.
+        </p>
+    </div>
+</body>
+
+</html>

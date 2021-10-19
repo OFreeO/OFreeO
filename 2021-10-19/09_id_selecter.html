@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 모든 h1에 대해서 글자색 빨간색 설정 */
+        #one {
+            color: red;
+        }
+
+        /* 모든 p에 대해서 글자색 파란색 설정 */
+        #one_p {
+            color: blue;
+        }
+
+        #two {
+            color: skyblue;
+        }
+
+        #two_p {
+            color: springgreen;
+        }/* , : or*/
+        #one,#one_p{
+            background: yellow;
+        }
+        /* and는 붙여쓰는 거 */
+        h1#two{/*h1이면서 id가 #two인 태그*/
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="one">Lorem ipsum dolor sit amet.</h1>
+    <!-- <h1 id="one">Lorem ipsum dolor sit amet.</h1> -->
+    <p id="one_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sit!</p>
+    <h1 id="two">Lorem ipsum dolor sit amet.</h1>
+    <p id="two_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sit!</p>
+
+</body>
+
+</html>
