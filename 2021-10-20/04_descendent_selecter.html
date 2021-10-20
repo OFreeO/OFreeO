@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #aaa h1{/*모든 h1 태그에게 적용함*/
+            color: #f0f;
+            background-color: aquamarine;
+        }
+        #aaa>p
+        {/*모든p태그들에게 적용하되,안쪽에서 나뉘어진 부분엔 적용되지 않음.*/
+            color: burlywood;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<!-- div : 공간 분할 태그 -->
+
+    <div id="aaa">
+        <h1>안녕하세요</h1>
+        <p>네</p>
+        <span>
+            <h1>헤이</h1>
+            <p>예스</p>
+        </span>
+        <h1>안녕히가세요</h1>
+        <p>넵</p>
+    </div>
+
+    <!-- #abcd>h1 -->
+    <div id="abcd">
+        <h1>id가abcd인 (div)태그의 자손</h1>
+    </div>
+    
+    
+    
+</body>
+</html>

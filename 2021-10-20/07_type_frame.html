@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1:last-of-type {
+            color: red;
+        }
+
+        h1:nth-last-of-type(3) {
+            color: blue
+        }
+
+        h1:nth-last-of-type(3n) {
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- h1*3{내용$} -->
+    <p>Lorem, ipsum.</p>
+    <h1>내용1</h1>
+    <h1>내용2</h1>
+    <h1>내용3</h1>
+    <h1>lorem</h1>
+    <h1>lorem</h1>
+    <h1>lorem</h1>
+    <p>마지막 줄 태그가 p 이므로 적용이 안됨</p>
+
+    <div>
+        <h1>안녕하세요 div 안쪽입니다.</h1>
+        <h1>안녕하세요 div 안쪽입니다.</h1>
+        <h1>안녕하세요 div 안쪽입니다.</h1>
+        <h1>안녕하세요 div 안쪽입니다.</h1>
+        <h1>안녕하세요 div 안쪽입니다.</h1>
+        <h1>안녕하세요 div 안쪽입니다.</h1>
+    </div>
+</body>
+
+</html>

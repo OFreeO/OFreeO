@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+
+        #box {
+            /* display: none; */
+            visibility: hidden;
+        }
+
+        /* div 태그랑 p 태그 둘다 display 값이 block이라서
+        이 두개한테 다 inline이 적용됨 */
+        .box2,
+        p {
+            display: inline;
+        }
+
+        .box3,
+        .box3>p {
+            display: inline-block;
+        }
+
+        #box4 {}
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <p>안보여유</p>
+    </div>
+
+    <div class="box2">
+        <p>display가 inline이라 쓴만큼 차지</p>
+    </div>
+
+    <div class="box2">
+        <p>display가 inline</p>
+    </div>
+
+    <div class="box2">
+        <p>display가 inline</p>
+    </div>
+
+    <div class="box3">
+        <p>display가 inline - block</p>
+    </div>
+
+    <div class="box3">
+        <p>display가 inline - block</p>
+    </div>
+
+    <div class="box3">
+        <p>display가 inline - block</p>
+    </div>
+
+    <div id="box4">
+        <p>아무것도 적용안함 display가 block이면 무조건 한줄을 다 차지한다</p>
+    </div>
+</body>
+
+</html>
