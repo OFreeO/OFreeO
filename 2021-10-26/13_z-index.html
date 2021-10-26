@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* fixed 절대 좌표,태그 상관없이 무조건 0,0을 기준으로 배치 */
+        .box{width: 100px;height: 100px; position: fixed;}
+        .red{background-color: red; left: 50px; top: 50px; z-index: 999;}
+        /* green 과 blue는 top 값이 없으므로 자동으로 위에 배치됨 */
+        .green{background-color: green; left: 100px; z-index: 9999;}
+        .blue{background-color: blue; left: 120px; top: 60px;}
+    </style>
+</head>
+<body>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+</body>
+</html>
