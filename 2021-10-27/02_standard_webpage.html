@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임 소개 페이지</title>
+    <style>
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            position: relative;
+            background-color: grey;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
+    </style>
+    <style>
+        /*메인*/
+        #main_header {
+            /* 중앙정렬 */
+            width: 960px;
+            margin: 0 auto;
+            position: relative;
+            /* 높이도 주고 부모의 position을 static이외의 것을 주면서
+            자손태그의 absolute를 제대로 적용시키려고 함 */
+            height: 160px;
+        }
+        #main_header p{
+            font-family: 'SBAggroB';
+            color: black;
+        }
+        #main_header>#title {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            color: black;
+        }
+
+        #main_header>#main_gnb {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        #main_header>#main_lnb {
+            position: absolute;
+            right: 0px;
+            bottom: 10px;
+        }
+    </style>
+    <style>
+        /*네비게이션 바*/
+        #main_gnb>ul {
+            overflow: hidden;
+        }
+
+        #main_gnb>ul>li {
+            float: left
+        }
+
+        #main_gnb>ul>li>a {
+            display: block;
+            padding: 2px 10px;
+            border: 1px solid white;
+            background-color: black;
+        }
+
+        #main_gnb>ul>li>a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #main_gnb>ul>li:first-child>a {
+            border-radius: 10px 0 0 10px;
+            background-color: black;
+        }
+
+        #main_gnb>ul>li:last-child>a {
+            border-radius: 0px 10px 10px 0px;
+            background-color: black;
+        }
+    </style>
+    <style>
+        /*사이드 네비게이션 바*/
+        #main_lnb>ul {
+            overflow: hidden;
+        }
+
+        #main_lnb>ul>li {
+            float: left;
+
+        }
+
+        #main_lnb>ul>li>a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid white;
+            background-color: black;
+        }
+
+        #main_lnb>ul>li>a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #main_lnb>ul>li:first-child>a {
+            border-radius: 10px 0px 0px 10px;
+            background-color: black;
+        }
+
+        #main_lnb>ul>li:last-child>a {
+            border-radius: 0px 10px 10px 0px;
+            background-color: black;
+        }
+    </style>
+    <style>
+        /*gnb 폰트 관련*/
+        @font-face {
+            font-family: 'SBAggroB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            font-family: 'SBAggroB';
+        }
+    </style>
+    <style>
+        /*lnb 폰트 관련*/
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Festive&family=Oswald&display=swap');
+
+        h2 {
+            font-family: 'Bebas Neue', cursive;
+        }
+    </style>
+    <style>
+        #main_header a {
+            font-family: 'Nanum GgocNaeEum';
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        #content {
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+            color: black;
+
+        }
+        #content>#main_section {
+            width: 750px;
+            float: left;
+        }
+        #content>#main_aside {
+            width: 200px;
+            float: right;
+            background-color: white;
+        }  
+        img{float: left;}
+        #main_section>article.main_article {
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        #main_section>article.main_article {
+            font-family: 'SBAggroB';
+        }
+    </style>
+    <style>
+        /*첫번째 탭*/
+        input:nth-of-type(1) {
+            display: none;
+            /*radio 체크박스 지우기*/
+        }
+
+        input:nth-of-type(1)~div:nth-of-type(1) {
+            display: none
+        }
+
+        /*라디오 옆에 div 지우기*/
+        input:nth-of-type(1):checked~div:nth-of-type(1) {
+            display: block
+        }
+
+        /*div 나타나게 하기*/
+
+        /*두번째 탭*/
+        input:nth-of-type(2) {
+            display: none;
+        }
+
+        input:nth-of-type(2)~div:nth-of-type(2) {
+            display: none
+        }
+
+        input:nth-of-type(2):checked~div:nth-of-type(2) {
+            display: block
+        }
+
+        /*탭 모양 구성*/
+        section.buttons {
+            overflow: hidden;
+        }
+
+        section.buttons>label {
+            /*수평정렬*/
+            display: block;
+            float: left;
+            /*크기 및 글자 위치 지정*/
+            width: 100px;
+            /*수직 방향 중앙 정렬*/
+            height: 30px;
+            line-height: 30px;
+            /*수평 방향 중앙 정렬*/
+            text-align: center;
+            /*테두리 지정*/
+            box-sizing: border-box;
+            border: 1px solid black;
+
+
+            background-color: black;
+            color: white;
+        }
+
+        /*radio가 체크되었을때 옆에 있는 라벨등 중 첫번째 라벨*/
+        /*First*/
+        input:nth-of-type(1):checked~section.buttons>label:nth-of-type(1) {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+
+        }
+
+        /*Second*/
+        input:nth-of-type(2):checked~section.buttons>label:nth-of-type(2) {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+    </style>
+
+    <style>
+        .item {
+            overflow: hidden;
+            padding: 10px;
+            border: 1px solid black;
+            border-top: none
+        }
+
+        .thumnail {
+            float: left;
+        }
+
+        .description {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .description>strong {
+            display: block;
+            width: 120px;
+        }
+
+        .description>strong+p {
+            width: 120px;
+        }
+
+        /*글자가 너무 길어졌을 때 생략시키는 방법*/
+        .description>strong,
+        .description>strong+p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <style>
+        #main_footer {
+            /*중앙 정렬*/
+            width: 960px;
+            margin: 0 auto;
+            margin-top: 10px;
+            /*테두리*/
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid black;
+            /*글자 정렬*/
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header id="main_header">
+        <div id="title">
+            <h1>Escape From Tarkov</h1>
+            <h2>이스케이프 프롬 타르코프</h2>
+        </div>
+        <div id="main_gnb">
+            <p>맵 리스트</p>
+            <ul>
+                <!-- (li>a[href=#]{$})*5 -->
+                <li><a href="#">커스텀</a></li>
+                <li><a href="#">인터체인지</a></li>
+                <li><a href="#">쇼어라인</a></li>
+                <li><a href="#">팩토리</a></li>
+                <li><a href="#">리저브</a></li>
+                <li><a href="#">랩</a></li>
+            </ul>
+        </div>
+        <div id="main_lnb">
+            <p>각종 정보</p>
+            <ul>
+                <li><a href="#">무기</a></li>
+                <li><a href="#">방어구</a></li>
+                <li><a href="#">아이템 리스트</a></li>
+                <li><a href="#">현재 시간대</a></li>
+                <li><a href="#">플리마켓 시세</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="content">
+        <section id="main_section">
+            <article class="main_article">
+                <h1>세상 어려운 FPS 게임</h1>
+                <img height="180" width=180px src="Escape_from_Tarkov_Box_cover_USEC.jpg" alt="">
+                <p>지금까지 이런 게임은 없었다<br>
+                이런 게임을 왜 돈주고 하나 싶을 정도로 어렵다!<br>
+                하지만 어려운 게임일수록 흥미를 느끼는 게이머라면 한번씩은 해볼만한 게임!!<br>
+                러시아의 게임회사 BattleStateGame 에서 개발한 하드코어 FPS 게임 Escape From Tarkov는<br>
+                여타 다른 FPS 장르 불문하고 가장 어려운 게임이라고 생각되는데<br>
+                다른게임에선 볼수없는 게임시스템이 너무나 특색이 깊기 때문인데 <br>
+                이스케이프 프롬 타르코프의 매력을 알아보도록 하자.</p>
+            </article>
+            <article class="main_article">
+                <h1>가진걸 걸고 하는 전투</h1>
+                <p>타르코프의 승리 컨셉은 '살아나가는 사람이 곧 승리자이다.' 이다<br>
+                   다른 유저와의 전투를 하고 승리시 상대의 물품을 가져간다는 컨셉은 배틀그라운드 같은 배틀로얄<br> 게임과
+                   아주 유사한데 차별점이 하나 있다면, 자신이 쓸 장비를 자신의 돈으로 산뒤 들고 들어간다. <br>
+                   그렇기 때문에 상대와의 전투에서 패배의 맛이 다른 Fps 게임보다 더욱 쓰게 느껴지며 승리또한 더욱<br>
+                   달게 느껴진다.
+                    
+                </p>
+            </article>
+            <article class="main_article">
+                <h1>다채로운 커스터마이징</h1>
+                <img height=130px width=200px src="images.jpg" alt="">
+                <p>Fps게임답게 총의 대한 커스터마이징이 가능한데, 다른게임과는 다르게 Escape From Tarkov의 커스터마이징은
+                    타 게임에서 볼수 없는 커스터마이징을 자랑한다.<br>
+                    조준경,총구,손잡이를 기본으로 총열의 길이,개머리판의 종류,플래시 라이트나 레이저의 종류 및 갯수<br>
+                    심지어는 사용할 탄창의 종류나 총알마저 고를수있게 되있다.
+                </p>
+            </article>
+            <article class="main_article">
+                <h1>현실적인 플레이</h1>
+                <p>타르코프의 또다른 매력은 현실과 맞는 고증이다. <br>
+                모든 총기,방어구,기타 물품은 게임속에서 구하거나</p>
+            </article>
+        </section>
+
+        <aside id="main_aside">
+            <input id="first" type="radio" name="tab" checked="checked">
+            <input id="second" type="radio" name="tab">
+            <section class="buttons">
+                <label for="first">First</label>
+                <label for="second">Second</label>
+            </section>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <a herf="#">
+                            <div class="thumnail">
+                                <img src="https://picsum.photos/id/1025/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>몬가있음</strong>
+                                <p>아무튼 몬가 몬가 있음</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a herf="#">
+                            <div class="thumnail">
+                                <img src="https://picsum.photos/id/1025/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>몬가있음</strong>
+                                <p>아무튼 몬가 몬가 있음</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a herf="#">
+                            <div class="thumnail">
+                                <img src="https://picsum.photos/id/1025/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>몬가있음</strong>
+                                <p>아무튼 몬가 몬가 있음</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a herf="#">
+                            <div class="thumnail">
+                                <img src="https://picsum.photos/id/1025/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>몬가있음</strong>
+                                <p>아무튼 몬가 몬가 있음</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <a herf="#">
+                            <div class="thumnail">
+                                <img src="https://picsum.photos/id/1020/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>두번째에도</strong>
+                                <p>아무튼 몬가 몬가 있음</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a herf="#">
+                            <div class="thumnail">
+                                <img src="https://picsum.photos/id/1020/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>두번째에도</strong>
+                                <p>아무튼 몬가 몬가 있음</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a herf="#">
+                            <div class="thumnail">
+                                <img src="https://picsum.photos/id/1020/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>두번째에도</strong>
+                                <p>아무튼 몬가 몬가 있음</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a herf="#">
+                            <div class="thumnail">
+                                <img src="https://picsum.photos/id/1020/45/45" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>두번째에도</strong>
+                                <p>아무튼 몬가 몬가 있음</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+    </div>
+    </aside>
+    </div>
+    <footer id="main_footer">
+        <h3>HTML5+CSS Basic</h3>
+        <address>WebSite Layout Basic</address>
+    </footer>
+
+</body>
+
+</html>
