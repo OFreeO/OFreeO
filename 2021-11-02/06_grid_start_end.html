@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #container{display: grid; gap: 10px; grid-template-columns: 200px 400px 200px;
+        grid-template-rows: 200px 400px;}
+        #container>div{border:1px solid black;background-color: pink; color: black;}
+        #cell_one{
+            /*세로로 1칸(그대로)*/
+            grid-row-start: 1;
+            grid-row-end: 2;
+            /*가로로 2칸 병합*/
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="cell_one">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>이걸 주석처리 해야하는 이유</div>
+    </div>
+</body>
+</html>

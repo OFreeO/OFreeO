@@ -1,0 +1,20 @@
+@color: #000000;
+@hue: hue(@color);
+@saturation: saturation(@color);
+@lightness: lightness(@color);
+
+div {
+    height: 5px
+}
+
+@iterations: 510;
+
+.more-gradaition(@i) when (@i>0) 
+{
+    div:nth-child(@{i})
+    {
+        background: hsl(@hue, @saturation+((@i)*0.2), @lightness+((@i)*0.08));
+    }
+    .more-gradaition((@i)-1)
+}
+.more-gradaition(@iterations);
