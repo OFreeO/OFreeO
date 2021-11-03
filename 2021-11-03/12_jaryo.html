@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        alert("2"==2) //true--------->?!
+        alert("2"===2)// false
+        alert(2===2)// false
+
+        //==:안에 들어있는 값만 같으면 ok
+        //===:타입과 값까지 전부다 똑같아야 함
+
+        //bool 타ㅏ입은 아니지만 거짓(false)로 간주하는것들
+        console.log("false 인것들의 모임")
+        console.log(Boolean(0))
+        console.log(Boolean(NaN))
+        console.log(Boolean(''))
+        console.log(Boolean(null))
+        console.log(Boolean(undefined))
+        console.log(Boolean(false))
+        console.log("확인하기")
+        console.log(Boolean('0'))
+        //결과 True
+        console.log(String(Number("문자열")))
+        //결과 NaN
+        // console.log((Number("문자열"))) 위와 결과가 같다
+        console.log(Boolean(String(Number("문자열"))))//true
+        //공백이 아닌 문자열이라서
+        console.log(Boolean((Number("문자열"))))//false
+        //NaN자체는 false로 변환됨
+
+
+        //문자열의 길이
+        let a = "여보세요 나야 거기 잘 지내니"
+        console.log(a[3])//4번째 글자가 찍힘
+
+        console.log(a.length)//길이가 찍힘
+
+        //문자열의 각 글자별로 접근 가능
+
+        num = 10
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
