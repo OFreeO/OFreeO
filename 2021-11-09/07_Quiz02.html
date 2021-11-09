@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            let aa = []
+            for(let i =0; i<5;i++){
+                let num = Number(prompt(`${i+1} 번째숫자를 입력하시오`))
+                aa.splice(i,0,num)
+                for(let j = 0; j < i; j++){
+                    if(aa[i] == aa[j]){
+                    alert("중복수 발생!")
+                    i--;
+                    continue
+                    }
+                }
+            }
+        for(let k = 0; k<5;k++){
+            console.log(`입력한 ${k+1}번째 수는 ${aa[k]}이다.`)
+        }
+        console.log(aa)
+    }
+    </script>
+</head>
+<body>
+    <button onclick="check()">시작하기!</button>
+</body>
+</html>

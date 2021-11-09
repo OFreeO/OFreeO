@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <img id="myImg">
+    <script>
+        function birth(){
+            let b = document.getElementById('birth').value
+            let myImage = document.getElementById('myImg')
+            b = Number(b)
+            switch (b) {
+                case 12:
+                        alert("겨울!")
+                        myImage.src = 'winter.jpg'
+                        break;
+
+                case 1:
+                        alert("겨울!")
+                        myImage.src = 'winter.jpg'
+                        break;
+                case 2:
+                        alert("겨울!")
+                        myImage.src = 'winter.jpg'
+                        break;
+                case 3:
+                        alert("봄!")
+                        myImage.src = 'spring.jpg'
+                        break;
+                case 4:
+                        alert("봄!")
+                        myImage.src = 'spring.jpg'
+                        break;
+                case 5:
+                        alert("봄!")
+                        myImage.src = 'spring.jpg'
+                        break;
+                case 6:
+                        alert("여름!")
+                        myImage.src = 'summer.jpg'
+                        break;
+                case 7:
+                        alert("여름!")
+                        myImage.src = 'summer.jpg'
+                        break;
+                case 8:
+                        alert("여름!")
+                        myImage.src = 'summer.jpg'
+                        break;
+                case 9:
+                        alert("가을!")
+                        myImage.src = 'fall.jpg'
+                    break;
+                case 10:
+                        alert("가을!")
+                        myImage.src = 'fall.jpg'
+                    break;
+                case 11:
+                        alert("가을!")
+                        myImage.src = 'fall.jpg'
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="birth">
+    <button onclick="birth()">입력하고 클릭</button>
+</body>
+</html>

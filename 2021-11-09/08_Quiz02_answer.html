@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let myinput =[]
+        for(let i = 0; i<5; i++)
+        {
+            let num = Number(prompt("숫자입력!"))
+            //indexof는 존재하지 않는 숫자의 위치를
+            //찾을경우 즉 탐색 실패시 -1 도출
+            if(myinput.indexOf(num) != -1
+                && myinput.length){
+                    i--;
+                    alert("숫자 다시 입력해라")
+                    continue
+                }
+                myinput[i] = num
+            }
+            for(let item of myinput)
+                console.log(item)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
