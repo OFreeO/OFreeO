@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let myinput = []//숫자를 넣을 공간
+        for(let i = 0; i<5; i++)
+        {
+            let num = Number(prompt(`${i+1}번째 숫자 입력`))
+            let my_flag = true // 중복이 아닐때 true 맞으면 false
+            for(let j = 0; j<i; j++){
+                if(num == myinput[j]){
+                    alert("중복!")
+                    i--
+                    my_flag = false
+                    break
+                }
+            }
+            if(my_flag)
+            myinput[i] = num
+        }
+        for(let item of myinput){
+            alert(item)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
