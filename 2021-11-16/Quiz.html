@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    번호<input type="text" id="num"><br>
+    이름<input type="text" id="name"><br>
+    나이<input type="text" id="age"><br>
+    <br>
+    <button id="Add">추가</button>
+    <button id="RN">수정</button>
+    <button id="Del">삭제</button>
+    <button id="Show">조회</button>
+    <h1>마지막으로 등록한 사람</h1>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+
+    <script>
+        let AddB = document.querySelector('#Add')
+        let RNB = document.querySelector('#RN')
+        let DelB = document.querySelector('#Del')
+        let ShowB = document.querySelector('#Show')
+
+        let students = []
+        AddB.onclick = function () {
+            let Num = document.querySelector('#num').value
+            let Name = document.querySelector('#name').value
+            let Age = document.querySelector('#age').value
+            students.push({
+                num: Num,
+                name: Name,
+                age: Age
+            })
+            console.log(students)
+        }
+        RNB.onclick = function () {
+            let Num = document.querySelector('#num').value
+            let Name = document.querySelector('#name').value
+            let Age = document.querySelector('#age').value
+            for (let i = 0; i <= students.length; i++) {
+                if (Num.value == students[i].Num) {
+                    students[i].push({
+                        num: Num,
+                        name: Name,
+                        age: Age
+                    })
+                } else if (Name.value == students[i].Name) {
+                    students[i].push({
+                        num: Num,
+                        name: Name,
+                        age: Age
+                    })
+                } else if (Age.value == students[i].Age) {
+                    students[i].push({
+                        num: Num,
+                        name: Name,
+                        age: Age
+                    })
+                } else {
+                    alert('등록된 정보가 없습니다')
+                }
+            }
+            console.log(students)
+        }
+        DelB.onclick = function () {
+            let Num = document.querySelector('#num').value
+            for (let i = 0; i <= students.length; i++) {
+                if (Num == students[i].Num) {
+                    students[i].Num = null
+                    students[i].Name = null
+                    students[i].Age = null
+                }
+            }
+        }
+        ShowB.onclick = function () {
+            let Num = document.querySelector('#num').value
+            for (let i = 0; i <= students.length; i++) {
+                if (Num.value == students[i].Num) {
+                    alert("이름 : " + students[i].Name + "나이 : " + students[i].Age)
+                } else {
+                    alert("정보가 없습니다!")
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
