@@ -5,70 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <img id="myImg">
     <script>
         function birth(){
-            let b = document.getElementById('birth').value
-            let myImage = document.getElementById('myImg')
-            b = Number(b)
-            switch (b) {
-                case 12:
-                        alert("겨울!")
-                        myImage.src = 'winter.jpg'
-                        break;
-
-                case 1:
-                        alert("겨울!")
-                        myImage.src = 'winter.jpg'
-                        break;
-                case 2:
-                        alert("겨울!")
-                        myImage.src = 'winter.jpg'
-                        break;
-                case 3:
-                        alert("봄!")
-                        myImage.src = 'spring.jpg'
-                        break;
-                case 4:
-                        alert("봄!")
-                        myImage.src = 'spring.jpg'
-                        break;
-                case 5:
-                        alert("봄!")
-                        myImage.src = 'spring.jpg'
-                        break;
-                case 6:
-                        alert("여름!")
-                        myImage.src = 'summer.jpg'
-                        break;
-                case 7:
-                        alert("여름!")
-                        myImage.src = 'summer.jpg'
-                        break;
-                case 8:
-                        alert("여름!")
-                        myImage.src = 'summer.jpg'
-                        break;
-                case 9:
-                        alert("가을!")
-                        myImage.src = 'fall.jpg'
-                    break;
-                case 10:
-                        alert("가을!")
-                        myImage.src = 'fall.jpg'
-                    break;
-                case 11:
-                        alert("가을!")
-                        myImage.src = 'fall.jpg'
-                    break;
-                default:
-                    break;
+            let b = Number(("당신이 태어난 달은?"))
+            if(b == 12,1,2){
+                alert("겨울!")
+            }
+            else if(b == 3,4,5){
+                alert("봄!")
+            }
+            else if(b==6,7,8){
+                alert("여름!")
+            }
+            else if(b==9,10,11){
+                alert("가을!")
             }
         }
     </script>
 </head>
 <body>
-    <input type="text" id="birth">
-    <button onclick="birth()">입력하고 클릭</button>
+    <button onclick="birth()">계절</button>
 </body>
 </html>

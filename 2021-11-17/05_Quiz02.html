@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function animal(k,n,m,num,a){
+            this.kind = k
+            this.name = n
+            this.master = m
+            this.number = num
+            this.age = a
+            this.regist = function()
+            {
+                alert(`${num}번 동물은 등록되었습니다.`
+                +`(${kind},${name},${master},${age})`)
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let Animal = []
+        for(let i = 0; i<3; i++){
+            let k = prompt(`${i+1}번째 동물의 종류는?`)
+            let n = prompt(`${i+1}번째 동물의 이름은?`)
+            let m = prompt(`${i+1}번째 동물의 주인은?`)
+            let num = prompt(`${i+1}번째 동물의 번호는?`)
+            let a = prompt(`${i+1}번째 동물의 나이는?`)
+            Animal.push({kind : k, name : n,master : m, number : num,age : a})
+            animal.regist()
+            console.log(Animal)
+        }
+    </script>
+</body>
+</html>

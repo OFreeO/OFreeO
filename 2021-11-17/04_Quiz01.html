@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function animal(k,n,m,num,a){
+            this.kind = k
+            this.name = n
+            this.master = m
+            this.number = num
+            this.age = a
+            
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let animal1 = new animal('개','멈머미','철수','1번','2살')
+        let animal2 = new animal('고양이','냠냐미','영희','2번','3살')
+        let animal3 = new animal('앵무새','앵앵이','훈이','3번','1살')
+        let animals = [animal1,animal2,animal3]
+        console.log(animals)
+    </script>
+</body>
+</html>

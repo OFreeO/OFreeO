@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1{
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 50px 50px 50px 50px;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    회차<input type="text" id="count">
+    <button id="lotto">로또 생성하기</button><br>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1><br>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1><br>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+
+    <script>
+        let count = document.querySelector('#count')
+        let btn = document.querySelector('#lotto')
+        btn.onclick = function(){
+            let lotto = []
+            let save = 0
+            for(let i = 0; i<7; i++)
+            {
+                let num = Math.floor(Math.random()*45)+1
+                console.log(num)
+                if(i>0)
+                {
+                    if(lotto.indexOf(num) != -1){
+                        i--
+                        continue
+                    }
+                    
+                }
+                lotto[i] = Number(num)
+                for(let i = 0; i<6; i++){
+                    for(let j = 0; j<i; j++){
+                        if(lotto[j] > lotto[i]){
+                            save = lotto[i]
+                            lotto[i] = lotto[j]
+                            lotto[j] = save
+                        }
+                    }
+                }
+            }
+            let h1list = document.getElementsByTagName('h1')
+            let k = 0;
+            for(let item of h1list)
+            if(h1 != ""){
+                continue
+            }
+            {
+                item.innerText = lotto[k]
+                k++
+            }
+        }
+    </script>
+</body>
+</html>

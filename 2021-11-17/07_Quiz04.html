@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function animal(k, n, m, num, a) {
+            this.kind = k
+            this.name = n
+            this.master = m
+            this.number = num
+            this.age = a
+            this.regist = function()
+            {
+                alert(`{num}번 동물은 등록되었습니다.`
+                +`(${kind},${name},${master},${age})`)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    동물 종류<input type="text" id="kind"><br>
+    동물 이름<input type="text" id="name"><br>
+    주인분 성함<input type="text" id="master"><br>
+    번호<input type="text" id="number"><br>
+    나이<input type="text" id="age"><br>
+
+    <button id="save">저장하기</button>
+    <button id="show">조회하기</button>
+    <script>
+        let Animal = []
+        let btn = document.querySelector('#save')
+        btn.onclick = function () {
+            let k = document.querySelector('#kind').value
+            let n = document.querySelector('#name').value
+            let m = document.querySelector('#master').value
+            let num = document.querySelector('#number').value
+            let a = document.querySelector('#age').value
+            for(let item of Animal){
+                if(item.number == num){
+                    alert("중복된 동물의 번호!")
+                    return
+                }
+            }
+            Animal.push({
+                kind: k,
+                name: n,
+                master: m,
+                number: num,
+                age: a
+                })
+            console.log(Animal)
+        }
+        let btn2 = document.querySelector('#show')
+        let num = document.querySelector('#number')
+        btn2.onclick = function(){
+            for(let item of Animal){
+                if(item.number == num.value){
+                    alert(`${item.number}번의 동물 종류는 ${item.kind}이며 ${item.age}살이며 이름은 ${item.name}이고 주인분 성함은 ${item.master}입니다.`)
+                }
+        }
+    }
+    </script>
+</body>
+
+</html>
