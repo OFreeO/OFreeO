@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <script>
+        function threeTime(func){
+            for(let i = 0; i<3; i++){
+                func()
+            }
+        }
+        threeTime(function(){alert("안녕")})
+        threeTime(()=>console.log("hello"))
+        function mypow(a=1){
+            alert("이 숫자의 제곱은"+a*a+"이다")
+        }
+        mypow()
+        mypow(5)
+
+    </script>
+</body>
+</html>
