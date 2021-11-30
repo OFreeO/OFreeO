@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+        let word = prompt("영단어 입력")
+        let count = 0;
+        for(let j = 0; j<alphabet.length; j++){
+            for(let i = 0; i<word.length; i++){
+                if(word[i] == alphabet[j])
+                count++
+            }
+            if(count == 0){
+                continue
+            }
+            console.log(alphabet[j]+"은 총"+count+"만큼 들어가있어!")
+            count = 0
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        //임의의 정숫값을 뽑는 함수 호출
+
+        function nextRandomInteger(limit){
+            //round(반올림)
+            return Math.round(Math.random()*limit)
+        }
+        let randomWord = (function()
+            {
+
+            let Words = 'ABCDEFG가나다라마바사あいうえお'
+            return function(){
+                return Words.charAt(nextRandomInteger(16))
+                }
+            })()
+
+        function randomSpeed(maxSpeed){
+            return Math.random()*maxSpeed - Math.random()*maxSpeed
+        }
+    </script>
+    <script>
+        let canvasWidth = 700
+        let canvasHeight = 400
+        function MovingText()
+        {  
+            this.x = nextRandomInteger(canvasWidth)
+            this.y = nextRandomInteger(canvasHeight)
+            this.vx = randomSpeed(10)
+            this.vy = randomSpeed(10)
+            this.b = document.createElement('h1')
+            this.b.innerText = randomWord()
+            this.b.style.position = 'fixed'
+            document.body.appendChild(this.b)
+            this.move = function() {
+                if(this.x<0 || this.x>canvasWidth)
+                    this.vx *= -1
+                    if(this.y<0 || this.y>canvasHeight)
+                        this.vy *= -1
+                        this.x += this.vx
+                        this.y += this.vy
+                        this.b.style.left = this.x+'px'
+                        this.b.style.top = this.y+'px'
+                    }
+                    this.Color = function(){
+                        let r = Math.floor(Math.random()*256)
+                        let g = Math.floor(Math.random()*256)
+                        let b = Math.floor(Math.random()*256)
+                        let temp = `rgb(${r},${g},${b})`
+                        console.log(temp)
+                        this.b.style.color = temp
+                        document.body.style.backgroundColor = temp
+                    }
+                }
+                </script>
+    <script>
+        window.onload = function()
+        {
+            let movingTexts = []
+            for(let i = 0 ; i < 100 ; i++){
+                movingTexts.push(new MovingText())
+            }
+            setInterval(function()
+            {
+                for(let i in movingTexts){
+                    movingTexts[i].move()
+                    movingTexts[i].Color()
+                }
+            }, 1000/40)
+        }
+        </script>
+        <script>
+            let mybtn = document.querySelector('#textbtn')
+            mybtn.onclick = function(){
+                alert('눌림')
+            }
+        </script>
+</head>
+<body>
+    <input type="text" id="AddText">
+    <button id="textbtn">원하는 글자 추가</button>
+</body>
+</html>

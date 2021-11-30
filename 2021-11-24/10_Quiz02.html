@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+        let count = 1
+        array = prompt("영단어를 입력해줘!")
+        for(let i = 0; i < alphabet.length; i++){
+            for(let j = 0; j < array.length; j++){
+                if(alphabet[i] == array[j]){
+                    alert(alphabet[i]+"는"+count+"번째에 처음 등장해!")
+                    continue
+                }
+                count++
+            }
+            count = 1
+            j = 0
+        }
+    </script>
+</body>
+</html>

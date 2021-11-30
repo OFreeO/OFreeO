@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let sun = document.getElementById('sun')
+            let earth = document.getElementById('earth')
+            let moon = document.getElementById('moon')
+            let doge = document.getElementById('doge')
+
+            sun.innerHTML='<img src="태양.png" width="100" height="100">'
+            earth.innerHTML='<img src="지구.jpg" width="75" height="75">'
+            moon.innerHTML='<img src="달.jpg" width="40" height="40">'
+            doge.innerHTML='<img src="화성.jpg" width="60" height="60">'
+            
+            sun.style.position = "fixed"
+            earth.style.position = 'fixed'
+            moon.style.position = 'fixed'
+            doge.style.position = 'fixed'
+
+            sun.style.left = 550+'px'
+            sun.style.top = 300+'px'
+            let earthAngle = 0;
+            let moonAngle = 0;
+            let dogeAngle = 0;
+            setInterval(function(){
+                let earthLeft = 550 + 150*Math.cos(earthAngle)
+                let earthTop = 300 + 150*Math.sin(earthAngle)
+
+                let dogeLeft = 550 + 250 * Math.cos(dogeAngle)
+                let dogeTop = 300 + 250 * Math.sin(dogeAngle)
+
+                let moonLeft = earthLeft+50*Math.cos(moonAngle)
+                let moonTop = earthTop+50*Math.sin(moonAngle)
+
+                
+                earth.style.left = earthLeft + 'px'
+                earth.style.top = earthTop + 'px'
+                moon.style.left = moonLeft + 'px'
+                moon.style.top = moonTop + 'px'
+                doge.style.left = dogeLeft +'px'
+                doge.style.top = dogeTop + 'px'
+
+                earthAngle += 0.1
+                moonAngle += 0.3
+                dogeAngle += 0.056
+            }, 1000/30)
+
+            sun.style.image
+        }
+    </script>
+</head>
+<body style="background: black;">
+    <div>
+        <h1 id="sun"></h1>
+        <h1 id="earth"></h1>
+        <h1 id="moon"></h1>
+        <h1 id="doge"></h1>
+    </div>
+</body>
+</html>
