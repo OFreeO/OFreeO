@@ -16,8 +16,11 @@
 
             divs.forEach(
                 function(mydiv, myindex){
+                    const val1 = 255
+                    const val2 = 255
+                    const val3 = 255
                     mydiv.style.height = '1px'
-                    mydiv.style.backgroundColor = `rgb(${255},${255},${0},${(255-myindex)/255})`
+                    mydiv.style.backgroundColor = `rgb(${255},${0},${0},${(255-myindex)/255})`
                 }
             )
         })

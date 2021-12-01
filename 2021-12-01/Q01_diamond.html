@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let c = 4
+        let k = 5
+        let s = 1
+        for(let i = 0; i<c; i++){
+            k--
+            for(let j = 0; j<k; j++){
+                document.write('&nbsp;')
+            }
+            document.write('&nbsp;')
+            for(let a = 0; a<s; a++){
+                document.write('*')
+            }
+            document.write('<br>')
+            s+=2
+        }
+        c = 4
+        k = 2
+        s = 5
+        for(let i = 0; i<c-1;i++){
+            k++
+            for(let j = 0; j<k;j++){
+                document.write('&nbsp;')
+            }
+            for(let a = 0; a<s; a++){
+                document.write('*')
+            }
+            document.write('<br>')
+            s-=2
+        }
+    </script>
+</body>
+</html>
