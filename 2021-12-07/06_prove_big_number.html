@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="myjq.js"></script>
+    <title>Document</title>
+    <style>
+        .max {
+            color: hotpink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1</h1>
+    <h1 class="1">0</h1>
+    <h2 class="1">0</h1>
+    <h1>2</h1>
+    <h1 class="2">0</h1>
+    <h2 class="2">0</h1>
+    <h1>3</h1>
+    <h1 class="3">0</h1>
+    <h2 class="3">0</h1>
+    <h1>4</h1>
+    <h1 class="4">0</h1>
+    <h2 class="4">0</h1>
+    <h1>5</h1>
+    <h1 class="5">0</h1>
+    <h2 class="5">0</h1>
+    <h1>6</h1>
+    <h1 class="6">0</h1>
+    <h2 class="6">0</h1>
+        
+    <script>
+    let one = 0
+    let two = 0
+    let three = 0
+    let four = 0
+    let five = 0
+    let six = 0
+    let arr = []
+    let count = prompt("주사위를 몇번 던질지 정하시오!")
+     for (let i = 0; i < count; i++) {
+    let num = Math.floor(Math.random() * 6 + 1)
+    switch (num) {
+    case 1:
+    one++
+    break;
+    case 2:
+    two++
+     break;
+    case 3:
+    three++
+    break;
+    case 4:
+    four++
+    break;
+    case 5:
+    five++
+    break;
+    case 6:
+    six++
+    break;
+    default:
+    break;
+}
+$('h1.1').text(one)
+$('h1.2').text(two)
+$('h1.3').text(three)
+$('h1.4').text(four)
+$('h1.5').text(five)
+$('h1.6').text(six)
+
+$('h2.1').text(one/count*100+'%')
+$('h2.2').text(two/count*100+'%')
+$('h2.3').text(three/count*100+'%')
+$('h2.4').text(four/count*100+'%')
+$('h2.5').text(five/count*100+'%')
+$('h2.6').text(six/count*100+'%')      
+}
+</script>
+</body>
+
+</html>
