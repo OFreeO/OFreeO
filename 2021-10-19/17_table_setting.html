@@ -9,25 +9,31 @@
         /* 테이블 태그의 자손인 tr 태그 그 tr태그의 자손인 th */
         /* 제목 부분이 빨간색으로 되게 해보세요 */
         /* 만약 후손태그로도 스타일 줄줄 알면 백그라운드 한번 줘보기 (노란색) */
-        table>tbody>tr>th {color: red}
+        table > tbody > tr > th {
+            color: red
+        }
+
         /* tbody는 여기 없지만 실질적 table 자손 */
-        table tr>th {background: yellow}
+        table tr > th {
+            background: yellow
+        }
+
         /* table의 후손 tbody 때문에 자손은 아님)에 스타일을 준다. */
     </style>
 </head>
 <body>
-    <table border="1">
-        <!-- <tbody>가 있지만 생략됨 -->
-        <tr>
-            <th>제목</th>
-            <th>제목</th>
-        </tr>
-        <tr>
-            <td>본문1</td>
-            <td>본문2</td>
-        </tr>
-        <!-- </tbody>가 있지만 생략됨 -->
-    </table>
-    
+<table border="1">
+    <!-- <tbody>가 있지만 생략됨 -->
+    <tr>
+        <th>제목</th>
+        <th>제목</th>
+    </tr>
+    <tr>
+        <td>본문1</td>
+        <td>본문2</td>
+    </tr>
+    <!-- </tbody>가 있지만 생략됨 -->
+</table>
+
 </body>
 </html>

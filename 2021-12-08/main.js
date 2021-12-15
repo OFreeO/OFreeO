@@ -8,7 +8,7 @@ $(
         const color = ['red','aquamarine','green','orange','darkred','gray']
 
         // js의 forEach
-        let arr = [sounds]
+
         sounds.each(function(index, soundFile){
             soundFile.onended = function(){
                 visual.text('')
@@ -36,7 +36,7 @@ $(
         const createBubbles = function(index){
             visual.text('')
             const bubble = $('<div></div>')
-            visual.append(bubble)
+            visual.append(bubble)//visual에 삽입
             bubble.css('background', color[index]).
             css('top','300px').
             css('animation','animation 2000ms linear infinite both')

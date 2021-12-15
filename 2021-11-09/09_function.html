@@ -6,36 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function hello()
-        {
+        function hello() {
             alert('hello world')
         }
 
-        function test(param){
-            for(let i=0; i<3; i++)
+        function test(param) {
+            for (let i = 0; i < 3; i++)
                 param()
         }
+
         //임명함수
         //a만 호출 ㅆㄱㄴ
-        let a = function()
-        {
+        let a = function () {
             alert("안녕하세요")
         }
-        let myarr = [a,test]
+        let myarr = [a, test]
         myarr[0]()
         myarr[1](a)
 
-        let abc = function(){
+        let abc = function () {
             return '123'
         }
         let myinput = abc()
         alert(myinput)
-        
+
     </script>
 </head>
 <body>
-    <button onclick="hello()">인사해볼까?</button>
-    <button onclick="test(a)">테스트</button>
-    <button onclick="a()">테스트</button>
+<button onclick="hello()">인사해볼까?</button>
+<button onclick="test(a)">테스트</button>
+<button onclick="a()">테스트</button>
 </body>
 </html>

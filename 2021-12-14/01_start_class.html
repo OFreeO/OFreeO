@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+        class Student{
+            constructor(이름, 국어, 영어, 수학)
+            {
+                this.이름 = 이름
+                this.국어 = 국어
+                this.영어 = 영어
+                this.수학 = 수학
+            }
+            getsum(){
+                return this.국어 + this.영어 + this.수학
+            }
+            getAvg(){
+                return this.getsum/3
+            }
+            toString(){
+                return `${this.이름}\t${this.getsum()}점\t${this.getAvg()}점\n`
+            }
+        }
+
+        const students = []
+        students.push(new Student('권용규',70,90,80))
+        students.push(new Student('박명회',50,70,60))
+        students.push(new Student('한지우',100,80,100))
+        let output = '이름\t총점\t평균\n'
+        for(const item of students){
+            output += item.toString()
+        console.log(output)
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

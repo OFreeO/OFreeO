@@ -7,31 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #header h1{color:red}/*id가 header인 태그 안쪽에 있는 모든것들*/
-        #section h1{color: orange;}/*id가 section인 태그 안 쪽에 있는 모든것들*/
-    /* h1#header랑 다르다 중앙에 공백이 존재함(공백이 없을경우 and로 취급됨) */
-    /* h1 #header : h1 안쪽에 있는 id가 header인 태그 */
+        #header h1 {
+            color: red
+        }
+
+        /*id가 header인 태그 안쪽에 있는 모든것들*/
+        #section h1 {
+            color: orange;
+        }
+
+        /*id가 section인 태그 안 쪽에 있는 모든것들*/
+        /* h1#header랑 다르다 중앙에 공백이 존재함(공백이 없을경우 and로 취급됨) */
+        /* h1 #header : h1 안쪽에 있는 id가 header인 태그 */
     </style>
 </head>
 
 <body>
-    <!-- div#header = <div id="header"></div>가 생김 -->
-    <div id="header">
-        <h1 class="title">Lorem, ipsum.</h1>
-        <div id="nav">
-            <h1>Navi</h1>
-        </div>
-
-        <h1>응애</h1>
-
+<!-- div#header = <div id="header"></div>가 생김 -->
+<div id="header">
+    <h1 class="title">Lorem, ipsum.</h1>
+    <div id="nav">
+        <h1>Navi</h1>
     </div>
-    <div id="section">
-        <h1 class="title">Lorem, ipsum.</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non expedita laboriosam assumenda quia, cumque ad
-            doloribus libero. Amet officia voluptatum, aperiam officiis numquam illum, veritatis cupiditate
-            exercitationem atque eius iusto.
-        </p>
-    </div>
+
+    <h1>응애</h1>
+
+</div>
+<div id="section">
+    <h1 class="title">Lorem, ipsum.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non expedita laboriosam assumenda quia, cumque ad
+        doloribus libero. Amet officia voluptatum, aperiam officiis numquam illum, veritatis cupiditate
+        exercitationem atque eius iusto.
+    </p>
+</div>
 </body>
 
 </html>

@@ -4,26 +4,26 @@
     <script src="myJson.json"></script>
 </head>
 <body>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <script>
-        let h1list = document.querySelectorAll('h1')
-        let mydata = JSON.parse(JSON.stringify(data))
-        console.log(mydata)
-        h1list[0].innerText = `${mydata.drwNO}회차`
-        h1list[1].innerText = `1 : ${mydata.drwNO1}`
-        h1list[2].innerText = `2 : ${mydata.drwNO2}`
-        h1list[3].innerText = `3 : ${mydata.drwNO3}`
-        h1list[4].innerText = `4 : ${mydata.drwNO4}`
-        h1list[5].innerText = `5 : ${mydata.drwNO5}`
-        h1list[6].innerText = `6 : ${mydata.drwNO6}`
-        h1list[7].innerText = `보너스 : ${mydata.bnusNO}`
-    </script>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<script>
+    let h1list = document.querySelectorAll('h1')
+    let mydata = JSON.parse(JSON.stringify(data))
+    console.log(mydata)
+    h1list[0].innerText = `${mydata.drwNO}회차`
+    h1list[1].innerText = `1 : ${mydata.drwNO1}`
+    h1list[2].innerText = `2 : ${mydata.drwNO2}`
+    h1list[3].innerText = `3 : ${mydata.drwNO3}`
+    h1list[4].innerText = `4 : ${mydata.drwNO4}`
+    h1list[5].innerText = `5 : ${mydata.drwNO5}`
+    h1list[6].innerText = `6 : ${mydata.drwNO6}`
+    h1list[7].innerText = `보너스 : ${mydata.bnusNO}`
+</script>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Cat{
+            constructor(이름,나이,집사){
+                this.이름 = 이름
+                this.나이 = 나이
+                this.집사 = 집사
+            }
+            eat(){
+                console.log("냠냠 "+this.이름+"은(는) 식사하신다.")
+            }
+            
+        }
+
+        class Tiger extends Cat{//Cat을 상속받음
+            constructor(name,age,master,sleepTime){
+                super(name,age,master)//Cat에서 상속받을 객체
+                this.수면시간 = sleepTime//수면시간추가
+            }
+            eat(){
+                super.eat()
+                console.log('항냥냥')
+            }
+            cry()
+            {
+                console.log(this.이름+' : 어흥')
+            }
+            sleep(){
+                console.log(this.수면시간+"시간동안 잔다.")
+            }
+
+            toString(){
+                return '이 호랑이는 '+this.이름+' 이며 주인은 '+this.집사+' 입니다. ' + this.나이 + ' 살이며 ' + this.수면시간 + ' 시간 만큼 잠을 잡니다.'
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let cat1 = new Cat("야옹이",1,"이동준")
+        let tiger1 = new Tiger("어흥염",34,"한지우",10)
+        console.log('---------------------')
+        console.log(cat1+'')
+        console.log(tiger1+'')
+        console.log(cat1)
+        console.log(tiger1)
+        console.log('---------------------')
+
+
+        
+        cat1.eat()
+        tiger1.eat()
+        tiger1.cry()
+        tiger1.sleep()
+    </script>
+</body>
+</html>

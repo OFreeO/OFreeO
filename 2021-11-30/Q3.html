@@ -7,42 +7,42 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        let input = prompt("암호 입력").toUpperCase()
-        let code = {
-            A:"ㄱ",
-            B:"ㄴ",
-            C:"ㄷ",
-            D:"ㄹ",
-            E:"ㅁ",
-            F:"ㅂ",
-            G:"ㅅ",
-            H:"ㅇ",
-            I:"ㅈ",
-            J:"ㅊ",
-            K:"ㅋ",
-            L:"ㅌ",
-            M:"ㅍ",
-            N:"ㅎ",
-            O:"ㅏ",
-            P:"ㅑ",
-            Q:"ㅓ",
-            R:"ㅕ",
-            S:"ㅗ",
-            T:"ㅛ",
-            U:"ㅜ",
-            V:"ㅠ",
-            W:"ㅡ",
-            X:"ㅣ"
-        }
-        
-        let result=''
-        for(let i = 0; i<input.length;i++){
-            result += code[input.charAt(i)]
-        }
-        let temp = document.createElement('h1')
-        temp.innerText = result
-        document.body.appendChild(temp)
-    </script>
+<script>
+    let input = prompt("암호 입력").toUpperCase()
+    let code = {
+        A: "ㄱ",
+        B: "ㄴ",
+        C: "ㄷ",
+        D: "ㄹ",
+        E: "ㅁ",
+        F: "ㅂ",
+        G: "ㅅ",
+        H: "ㅇ",
+        I: "ㅈ",
+        J: "ㅊ",
+        K: "ㅋ",
+        L: "ㅌ",
+        M: "ㅍ",
+        N: "ㅎ",
+        O: "ㅏ",
+        P: "ㅑ",
+        Q: "ㅓ",
+        R: "ㅕ",
+        S: "ㅗ",
+        T: "ㅛ",
+        U: "ㅜ",
+        V: "ㅠ",
+        W: "ㅡ",
+        X: "ㅣ"
+    }
+
+    let result = ''
+    for (let i = 0; i < input.length; i++) {
+        result += code[input.charAt(i)]
+    }
+    let temp = document.createElement('h1')
+    temp.innerText = result
+    document.body.appendChild(temp)
+</script>
 </body>
 </html>

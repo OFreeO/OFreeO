@@ -4,17 +4,16 @@
 @lightness: lightness(@color);
 
 div {
-    height: 5px
+  height: 5px
 }
 
 @iterations: 510;
 
-.more-gradaition(@i) when (@i>0) 
-{
-    div:nth-child(@{i})
-    {
-        background: hsl(@hue, @saturation+((@i)*0.196), @lightness+((@i)*0.098));
-    }
-    .more-gradaition((@i)-1)
+.more-gradaition(@i) when (@i>0) {
+  div:nth-child(@{i}) {
+    background: hsl(@hue, @saturation+((@i)*0.196), @lightness+((@i)*0.098));
+  }
+  .more-gradaition((@i)-1)
 }
+
 .more-gradaition(@iterations);

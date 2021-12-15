@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //name , age , 견종 = 멤버 변수 이자
+        //객체
+        class Person{
+            constructor(name, age, 견종)
+            {
+                this.name = name
+                this.age = age
+                this.좋아하는_견종 = 견종
+            }
+            //함수추가 가능
+            toString(){
+                return `이름:${this.name}, 나이:${this.age}, 좋아하는견종:${this.좋아하는_견종}`
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let mydoggy = new Person('뽀삐',30,'골든리트리버')
+        alert(mydoggy.name+' 는 '+mydoggy.age+' 살이며 '+mydoggy.좋아하는_견종+' 을(를) 좋아한다')
+
+        let oak = new Person('옥수철',17,'시바견')
+        alert(oak.name+' 는 '+oak.age+' 살이며 '+oak.좋아하는_견종+' 을(를) 좋아한다')
+
+        alert(mydoggy.toString())
+        alert(oak.toString())
+
+        let people = []
+
+        people.push(mydoggy)
+        people.push(oak)
+        people.push(new Person('권도균',27,'진돗개'))
+
+        for(const item of people){
+            console.log(item.toString())
+        }
+
+    </script>
+</body>
+</html>

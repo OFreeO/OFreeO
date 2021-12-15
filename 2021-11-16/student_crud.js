@@ -8,11 +8,6 @@ function MyStudent(n, a, num) {
 }
 
 
-
-
-
-
-
 // window - DOM객체
 //DOM 은 document object model
 //window 는 우리가 웹 브라우저에서 이영하는 창
@@ -47,12 +42,12 @@ window.onload = function () {
     Read.onclick = function () {
         for (let item of students) {
             if (Num.value == item.number) {
-            alert(`${item.number}번 학생은 ${item.name}이며 ${item.age}살이다`)
-            return
+                alert(`${item.number}번 학생은 ${item.name}이며 ${item.age}살이다`)
+                return
             }
         }
     }
-    Update.onclick = function(){
+    Update.onclick = function () {
         for (let item of students) {
             if (Num.value == item.number) {
                 item.name = Name.value
@@ -60,14 +55,13 @@ window.onload = function () {
             }
         }
     }
-    Delete.onclick = function(){
-        for(let i = 0; i<students.length;i++){
-            if(Num.value == students[i].number)
-            students.splice(i,1)
+    Delete.onclick = function () {
+        for (let i = 0; i < students.length; i++) {
+            if (Num.value == students[i].number)
+                students.splice(i, 1)
         }
     }
-    consolelog.onclick=function()
-    {
+    consolelog.onclick = function () {
         console.log(students)
     }
 }

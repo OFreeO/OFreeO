@@ -1,4 +1,4 @@
-function lotto(drwNum,one,two,three,four,five,six,bns){
+function lotto(drwNum, one, two, three, four, five, six, bns) {
 
     this.drwNum = drwNum
     this.one = one

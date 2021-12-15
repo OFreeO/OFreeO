@@ -6,37 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1{user-select: none;}
+        h1 {
+            user-select: none;
+        }
     </style>
 </head>
 <body>
-    <h1>Lorem ipsum dolor sit amet.</h1>
-    <script>
-        let counter = 1
-        let flag = false
-        const myh1 = document.querySelector('h1')
-        myh1.addEventListener('click',
-        function()
-        {
-            if(flag == false){
+<h1>Lorem ipsum dolor sit amet.</h1>
+<script>
+    let counter = 1
+    let flag = false
+    const myh1 = document.querySelector('h1')
+    myh1.addEventListener('click',
+        function () {
+            if (flag == false) {
                 counter++
-            }
-            else{
+            } else {
                 counter--
             }
-            if(counter == 25){
+            if (counter == 25) {
                 flag = true
-            }else if(counter == 0){
+            } else if (counter == 0) {
                 flag = false
             }
-            myh1.style.color = `rgb(${(counter*10)},0,0)`
+            myh1.style.color = `rgb(${(counter * 10)},0,0)`
         })
-        myh1.addEventListener('mouseover',function(){
-            myh1.style.backgroundColor = 'yellow'
-        })
-        myh1.addEventListener('mouseout',function(){
-            myh1.style.backgroundColor = 'white'
-        })
-    </script>
+    myh1.addEventListener('mouseover', function () {
+        myh1.style.backgroundColor = 'yellow'
+    })
+    myh1.addEventListener('mouseout', function () {
+        myh1.style.backgroundColor = 'white'
+    })
+</script>
 </body>
 </html>

@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <img id="myImg">
-    <script>
-        let myImage = document.getElementById('myImg')
-        // 위 아래 같은 기능
-        // let myImage = document.querySelector('#myImg')
-        let input = prompt("숫자를 입력 : ")
-        if (input>100)
+<img id="myImg">
+<script>
+    let myImage = document.getElementById('myImg')
+    // 위 아래 같은 기능
+    // let myImage = document.querySelector('#myImg')
+    let input = prompt("숫자를 입력 : ")
+    if (input > 100) {
+        myImage.src = "https://picsum.photos/id/1025/600/400"
 
-        {
-            myImage.src = "https://picsum.photos/id/1025/600/400"
-        
-        }
-        else
-        {
-            myImage.src = `bunny.jpg`
-        }
+    } else {
+        myImage.src = `bunny.jpg`
+    }
 
-    </script>
-    
+</script>
+
 </body>
 </html>

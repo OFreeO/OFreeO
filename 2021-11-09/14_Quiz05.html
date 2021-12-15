@@ -3,12 +3,12 @@
 <head>
     <img id="myImg">
     <script>
-        function rock(){
+        function rock() {
             let myImage = document.getElementById('myImg')
             myImage.src = 'rock.jpg'
 
-            
-            let pc = Number(Math.floor(Math.random()*3)).value
+
+            let pc = Number(Math.floor(Math.random() * 3)).value
             switch (pc) {
                 case 0:
                     myImage.src = 'rock.jpg'
@@ -22,17 +22,18 @@
                 default:
                     break;
             }
-            
+
         }
-        function scissor(){
+
+        function scissor() {
             let myImage = document.getElementById('myImg')
             myImage.src = 'scissor.jpg'
 
-            
-            let pc = Math.floor(Math.random()*3)
+
+            let pc = Math.floor(Math.random() * 3)
             switch (pc) {
                 case 0:
-                    
+
                     break;
                 case 1:
 
@@ -44,15 +45,16 @@
                     break;
             }
         }
-        function paper(){
+
+        function paper() {
             let myImage = document.getElementById('myImg')
             myImage.src = 'paper.jpg'
 
-            
-            let pc = Math.floor(Math.random()*3)
+
+            let pc = Math.floor(Math.random() * 3)
             switch (pc) {
                 case 0:
-                    
+
                     break;
                 case 1:
 
@@ -68,8 +70,8 @@
     </script>
 </head>
 <body>
-    <button onclick="scissor()">가위</button>
-    <button onclick="rock()">바위</button>
-    <button onclick="paper()">보</button>
+<button onclick="scissor()">가위</button>
+<button onclick="rock()">바위</button>
+<button onclick="paper()">보</button>
 </body>
 </html>

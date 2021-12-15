@@ -4,17 +4,34 @@
     <style>
         /* fixed 절대 좌표,태그 상관없이 무조건 0,0을 기준으로 배치 */
         /* absolute 와 fixed가 언뜻보면 똑같이 동작함 */
-        .box{width: 100px;height: 100px; position: absolute;}
-        .red{background-color: red; left: 50px; top: 50px;}
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .red {
+            background-color: red;
+            left: 50px;
+            top: 50px;
+        }
+
         /* green 과 blue는 top 값이 없으므로 자동으로 위에 배치됨 */
-        .green{background-color: green; left: 100px;}
-        .blue{background-color: blue; left: 200px}
+        .green {
+            background-color: green;
+            left: 100px;
+        }
+
+        .blue {
+            background-color: blue;
+            left: 200px
+        }
     </style>
 </head>
 <body>
-    <div class="box red"></div>
-    <div class="box green"></div>
-    <div class="box blue"></div>
-    
+<div class="box red"></div>
+<div class="box green"></div>
+<div class="box blue"></div>
+
 </body>
 </html>

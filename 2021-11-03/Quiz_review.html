@@ -12,26 +12,44 @@
 
         const r = prompt(`원의 반지름 입력 : `)
         const PI = 3.14
-        alert(`원의 넓이 : ${r*r*PI}, 원의 둘레 : ${2*r*3.14}`)
+        alert(`원의 넓이 : ${r * r * PI}, 원의 둘레 : ${2 * r * 3.14}`)
 
         const dal = prompt(`몇 달러? : `)
         const kr = 1207
-        alert(`환전값 : ${dal*kr}KRW`)
+        alert(`환전값 : ${dal * kr}KRW`)
 
         const myYear = prompt("몇년생이니?")
         let myOutPut = ''
-        const gan = myYear%10
-        if(gan == 9) {myOutPut += 기}
-        if(gan == 0) {myOutPut += 경}
-        if(gan == 1) {myOutPut += 신}
-        if(gan == 2) {myOutPut += 임}
-        if(gan == 3) {myOutPut += 계}
-        if(gan == 4) {myOutPut += 갑}
-        if(gan == 5) {myOutPut += 을}
-        if(gan == 6) {myOutPut += 병}
-        if(gan == 7) {myOutPut += 정}
+        const gan = myYear % 10
+        if (gan == 9) {
+            myOutPut += 기
+        }
+        if (gan == 0) {
+            myOutPut += 경
+        }
+        if (gan == 1) {
+            myOutPut += 신
+        }
+        if (gan == 2) {
+            myOutPut += 임
+        }
+        if (gan == 3) {
+            myOutPut += 계
+        }
+        if (gan == 4) {
+            myOutPut += 갑
+        }
+        if (gan == 5) {
+            myOutPut += 을
+        }
+        if (gan == 6) {
+            myOutPut += 병
+        }
+        if (gan == 7) {
+            myOutPut += 정
+        }
 
-        const tti = myYear%12
+        const tti = myYear % 12
         switch (tti) {
             case 9:
                 myOutPut += 사
@@ -75,6 +93,6 @@
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>

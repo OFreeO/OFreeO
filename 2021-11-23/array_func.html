@@ -4,52 +4,57 @@
 
 </head>
 <body>
-    <script>
-        function test(...items){
-            console.log(items)
+<script>
+    function test(...items) {
+        console.log(items)
+    }
+
+    const mynumbers = [11, 55, 22, 33, 99]
+    mynumbers.forEach((v, i, a) => {
+        // v = value
+        // i = index
+        // a = array
+        console.log(`${i}번째 요소:${v}`)
+        test(...a)//배열 전체 출력
+    })
+    mynumbers.forEach((v, i) => {
+        console.log(`${i}번째 요소:${v}`)
+    })
+    mynumbers.forEach((v) => {
+        console.log(`값 :${v}`)
+    })
+
+    //map : 배열에 있는것을 재가공
+    //forEach문처럼 여러개의 매개변수가 필요하기도함
+    //매개변수는 한개만 넣어도 된다.
+
+    const powernumbers = mynumbers.map(
+        (v) => {
+            return v * v
         }
-        const mynumbers = [11,55,22,33,99]
-        mynumbers.forEach((v,i,a)=>{
-            // v = value
-            // i = index
-            // a = array
-            console.log(`${i}번째 요소:${v}`)
-            test(...a)//배열 전체 출력
-        })
-        mynumbers.forEach((v,i)=>{
-            console.log(`${i}번째 요소:${v}`)
-        })
-        mynumbers.forEach((v)=>{
-            console.log(`값 :${v}`)
-        })
+    )
+    test(...mynumbers)
+    test(...powernumbers)
 
-        //map : 배열에 있는것을 재가공
-        //forEach문처럼 여러개의 매개변수가 필요하기도함
-        //매개변수는 한개만 넣어도 된다.
+    const even_numbers = mynumbers.filter(
+        (v) => {
+            return v % 2 == 0
+        }
+    )
+    test(...even_numbers)
 
-        const powernumbers = mynumbers.map(
-            (v) => {return v*v}
-        )
-        test(...mynumbers)
-        test(...powernumbers)
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-        const even_numbers = mynumbers.filter(
-            (v)=>{return v%2 ==0}
-        )
-        test(...even_numbers)
+    //filter,map,forEach 는 중첩됨
 
-        let numbers = [1,2,3,4,5,6,7,8,9,10]
+    numbers.filter(
+        (v) => v % 2 == 0
+    ).map(
+        (v) => v * v
+    ).forEach(
+        (v) => console.log(v)
+    )
 
-        //filter,map,forEach 는 중첩됨
-
-        numbers.filter(
-            (v)=>v%2==0
-            ).map(
-                (v)=>v*v
-            ).forEach(
-                (v)=>console.log(v)
-            )
-
-    </script>
+</script>
 </body>
 </html>

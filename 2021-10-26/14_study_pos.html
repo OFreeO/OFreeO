@@ -3,23 +3,47 @@
 <head>
     <style>
         /* fixed 절대 좌표,태그 상관없이 무조건 0,0을 기준으로 배치 */
-        .box{width: 100px;height: 100px; position: absolute;}
-        .red{background-color: red; left: 10px; top: 10px;}
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .red {
+            background-color: red;
+            left: 10px;
+            top: 10px;
+        }
+
         /* green 과 blue는 top 값이 없으므로 자동으로 위에 배치됨 */
-        .green{background-color: green; left: 50px; top: 50px;}
-        .blue{background-color: blue; left: 90px; top: 90px;}
+        .green {
+            background-color: green;
+            left: 50px;
+            top: 50px;
+        }
+
+        .blue {
+            background-color: blue;
+            left: 90px;
+            top: 90px;
+        }
     </style>
     <style>
-        body>div {position: relative; height: 100px; border: 3px solid black; overflow: hidden;}
+        body > div {
+            position: relative;
+            height: 100px;
+            border: 3px solid black;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
-    <h1>Lorem, ipsum.</h1>
-    <div>
-        <div class="box red"></div>
-        <div class="box green"></div>
-        <div class="box blue"></div>
-    </div>
-    <h1>Lorem, ipsum dolor.</h1>
+<h1>Lorem, ipsum.</h1>
+<div>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+</div>
+<h1>Lorem, ipsum dolor.</h1>
 </body>
 </html>

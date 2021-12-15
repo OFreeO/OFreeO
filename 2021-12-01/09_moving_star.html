@@ -12,10 +12,10 @@
             star.style.position = 'fixed'
             let [x, y] = [0, 0]
             const block = 20
-            let rgb = `rgb(${x*block},${y*block},255)`
+            let rgb = `rgb(${x * block},${y * block},255)`
             const print = () => {
-                star.style.left = `${x*block}px`
-                star.style.top = `${y*block}px`
+                star.style.left = `${x * block}px`
+                star.style.top = `${y * block}px`
             }
             const [left, up, right, down] = [37, 38, 39, 40]
             document.body.addEventListener('keydown', (event) => {
@@ -44,11 +44,11 @@
 
                     default:
                         break;
-                    }
-                    print()
-                    
-                })
-                star.style.color = rgb
+                }
+                print()
+
+            })
+            star.style.color = rgb
 
 
         })
@@ -56,7 +56,7 @@
 </head>
 
 <body>
-    <h1>★</h1>
+<h1>★</h1>
 </body>
 
 </html>

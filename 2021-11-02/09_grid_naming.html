@@ -7,34 +7,52 @@
             display: grid;
             /*세로부분과 가로부분에 대해서 간략하게 비율을 정할수 있음*/
             grid-template: 1fr 200px 1fr / 500px 1fr;
-            grid-template-areas: 'Header Header''Aside Section''Footer Footer';gap: 10px;
+            grid-template-areas: 'Header Header''Aside Section''Footer Footer';
+            gap: 10px;
         }
 
-        #grid>div {
-            border: 1px solid black}
-            #Header{grid-area: Header; background-color: aqua;}
-            #Aside{grid-area: Aside; background-color: silver;}
-            #Section{grid-area: Section; background-color: sienna;}
-            #Footer{grid-area: Footer; background-color: bisque;}
-        
+        #grid > div {
+            border: 1px solid black
+        }
+
+        #Header {
+            grid-area: Header;
+            background-color: aqua;
+        }
+
+        #Aside {
+            grid-area: Aside;
+            background-color: silver;
+        }
+
+        #Section {
+            grid-area: Section;
+            background-color: sienna;
+        }
+
+        #Footer {
+            grid-area: Footer;
+            background-color: bisque;
+        }
+
     </style>
 </head>
 
 <body>
-    <div id="grid">
-        <div id="Header">
-            <h1>Header</h1>
-        </div>
-        <div id="Aside">
-            <h1>Aside</h1>
-        </div>
-        <div id="Section">
-            <h1>Section</h1>
-        </div>
-        <div id="Footer">
-            <h1>Footer</h1>
-        </div>
+<div id="grid">
+    <div id="Header">
+        <h1>Header</h1>
     </div>
+    <div id="Aside">
+        <h1>Aside</h1>
+    </div>
+    <div id="Section">
+        <h1>Section</h1>
+    </div>
+    <div id="Footer">
+        <h1>Footer</h1>
+    </div>
+</div>
 </body>
 
 </html>

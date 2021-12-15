@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        let imgUrl = ''
+        let component
+            const container = document.getElementById('root')
+        const name = prompt('이름이 뭐야?')
+        if(name == '개')
+        {
+            imgUrl = "https://picsum.photos/id/1025/600/400"
+            component = <div>
+            <h1>{name}(이)가 나타났다!</h1>
+            <img src={imgUrl}/>
+            <h1>저건 {name}!!</h1>
+            </div>
+        }
+        else if(name == '곰'){
+            imgUrl = "https://picsum.photos/id/1020/600/400"
+            component = <div>
+            <h1>{name}(이)가 나타났다!</h1>
+            <img src={imgUrl}/>
+            <h1>저건 {name}!!</h1>
+            </div>
+        }
+        else if(name == '사슴'){
+            imgUrl = "https://picsum.photos/id/1003/600/400"
+            component = <div>
+            <h1>{name}(이)가 나타났다!</h1>
+            <img src={imgUrl}/>
+            <h1>저건 {name}!!</h1>
+            </div>
+        }
+        else
+            component = <div><h1>그런거 없다.</h1></div>
+        ReactDOM.render(component,container)
+        // ReactDOM.render(nope)
+    </script>
+</body>
+
+</html>

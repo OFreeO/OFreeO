@@ -3,8 +3,9 @@
 
 <head>
     <style>
-        #container{
-            display: grid; grid-template: 100px 100px / 300px 100px;
+        #container {
+            display: grid;
+            grid-template: 100px 100px / 300px 100px;
             grid-template-areas: 
             'header header'
             'navigation navigation'
@@ -12,40 +13,57 @@
             'footer footer';
             background-color: springgreen;
         }
-        .header{grid-area: header;}
-        .navigation{grid-area: navigation;}
-        .aside{grid-area: aside; background-color: red;}
-        .contants{grid-area: contants; background-color: aqua;}
-        .footer{grid-area: footer;}
+
+        .header {
+            grid-area: header;
+        }
+
+        .navigation {
+            grid-area: navigation;
+        }
+
+        .aside {
+            grid-area: aside;
+            background-color: red;
+        }
+
+        .contants {
+            grid-area: contants;
+            background-color: aqua;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
     </style>
 </head>
 
 <body>
-    <div id="container">
-        <div class="header">
-            <h1>header</h1>
+<div id="container">
+    <div class="header">
+        <h1>header</h1>
+    </div>
+    <div class="navigation">
+        <h1>navigation</h1>
+    </div>
+    <div id="set">
+        <div class="aside">
+            <h1>aside</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, quos molestiae. Temporibus a
+                consequuntur asperiores neque facere eum ducimus unde sed, vero enim quas ullam dicta quia eligendi
+                dolores exercitationem.</p>
         </div>
-        <div class="navigation">
-            <h1>navigation</h1>
-        </div>
-        <div id="set">
-            <div class="aside">
-                <h1>aside</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, quos molestiae. Temporibus a
-                    consequuntur asperiores neque facere eum ducimus unde sed, vero enim quas ullam dicta quia eligendi
-                    dolores exercitationem.</p>
-            </div>
-            <div class="contants">
-                <h1>contants</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repellendus asperiores distinctio ab
-                    corporis quis voluptatem unde perspiciatis voluptas minima officia quibusdam corrupti inventore
-                    omnis cumque, aut dignissimos non numquam?</p>
-            </div>
-        </div>
-        <div class="footer">
-            <h1>footer</h1>
+        <div class="contants">
+            <h1>contants</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repellendus asperiores distinctio ab
+                corporis quis voluptatem unde perspiciatis voluptas minima officia quibusdam corrupti inventore
+                omnis cumque, aut dignissimos non numquam?</p>
         </div>
     </div>
+    <div class="footer">
+        <h1>footer</h1>
+    </div>
+</div>
 </body>
 
 </html>

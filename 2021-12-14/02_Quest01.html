@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        window.onload = function (){
+        document.getElementById('add').addEventListener('click',add)
+        document.getElementById('reset').addEventListener('click',reset)
+        class Student {
+            constructor(이름, 성별, 번호) {
+                this.이름 = 이름
+                this.성별 = 성별
+                this.번호 = 번호
+            }
+            toString(){
+                return `${this.이름}은\t${this.성별}이며\t${this.번호}번이다\n`
+            }
+        }
+        students = []
+        function add(){
+            let name = document.getElementById('name').value
+            let sex = document.getElementById('sex').value
+            let number = document.getElementById('number').value
+            let tag = document.createElement('h1')
+            for(const item of students){
+                if(number == students[number]){
+                    alert("중복된 번호!")
+                    break;
+                }
+            }
+            students.push(new Student(name,sex,number))
+            document.body.appendChild(tag)
+            tag.innerText = students[students.length-1].toString()
+            if(sex == '남자'){
+                tag.style.color = 'blue'
+                tag.style.backgroundColor = 'green'
+            }else if(sex == '여자'){
+                tag.style.color = 'pink'
+                tag.style.backgroundColor = 'black'
+            }
+        }
+        function reset(){
+            let tag = document.createElement('h1')
+            for(let i = 0 ; i < students.length; i++){
+                document.body.removeChild(tag)
+            }
+            students = []
+        }
+    }
+    </script>
+
+    이름<input type="text" id="name">&nbsp;
+    <button id="add">저장하기</button><br>
+    성별<input type="text" id="sex">&nbsp;
+    <button id="reset">리셋</button><br>
+    번호<input type="text" id="number">&nbsp;
+    <button id="sort">정렬보기</button>
+
+    
+</body>
+
+</html>

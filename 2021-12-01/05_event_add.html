@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             user-select: none;
         }
     </style>
 </head>
 <body>
-    <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, minus?</h1>
-    <script>
-        const myh1 = document.querySelector('h1')
-        let count = 0
-        myh1.addEventListener('click', function(){
-            myh1.style.color = `rgb(${count},0,0)`
-        })
-        myh1.addEventListener('click',function(){
-            count++
-            myh1.style.backgroundColor = `rgb(0,${count*5},0)`
-        })
-    </script>
+<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, minus?</h1>
+<script>
+    const myh1 = document.querySelector('h1')
+    let count = 0
+    myh1.addEventListener('click', function () {
+        myh1.style.color = `rgb(${count},0,0)`
+    })
+    myh1.addEventListener('click', function () {
+        count++
+        myh1.style.backgroundColor = `rgb(0,${count * 5},0)`
+    })
+</script>
 </body>
 </html>

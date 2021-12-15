@@ -11,56 +11,77 @@
     body {
         background-color: gray;
     }
-    .red{color: red;}
-    .orange{color: orange;}
-    .yellow{color: yellow;}
-    .green{color: green;}
-    .blue{color: blue;}
-    .darkblue{color: darkblue;}
-    .purple{color: purple;}
+
+    .red {
+        color: red;
+    }
+
+    .orange {
+        color: orange;
+    }
+
+    .yellow {
+        color: yellow;
+    }
+
+    .green {
+        color: green;
+    }
+
+    .blue {
+        color: blue;
+    }
+
+    .darkblue {
+        color: darkblue;
+    }
+
+    .purple {
+        color: purple;
+    }
 </style>
 
 <body>
-    <script>
-        const size = 5
-        let color = ['red','orange','yellow','green','blue','darkblue','purple']
-        let c = 0
-        for (let i = 1; i <= size; i++) {
-            for (let j = size; j > i; j--) {
-                let space = document.createElement('span')
-                space.innerHTML = "&nbsp"
-                document.body.appendChild(space)
-            }
-            for (let k = 0; k < 2 * i - 1; k++) {
-                let star = document.createElement('span')
-                star.innerHTML = '*'
-                star.setAttribute('class',color[c%7])
-                document.body.appendChild(star)
-                // star.style.color = color[c%7]
+<script>
+    const size = 5
+    let color = ['red', 'orange', 'yellow', 'green', 'blue', 'darkblue', 'purple']
+    let c = 0
+    for (let i = 1; i <= size; i++) {
+        for (let j = size; j > i; j--) {
+            let space = document.createElement('span')
+            space.innerHTML = "&nbsp"
+            document.body.appendChild(space)
+        }
+        for (let k = 0; k < 2 * i - 1; k++) {
+            let star = document.createElement('span')
+            star.innerHTML = '*'
+            star.setAttribute('class', color[c % 7])
+            document.body.appendChild(star)
+            // star.style.color = color[c%7]
 
-            }
-            c++
-            let br = document.createElement('br')
-            document.body.appendChild(br)
         }
-        for (let i = size - 1; i > 0; i--) {
-            for (let j = size; j > i; j--) {
-                space = document.createElement('span')
-                space.innerHTML = '&nbsp'
-                document.body.appendChild(space)
-            }
-            for (let k = 0; k < 2 * i - 1; k++) {
-                star = document.createElement('span')
-                star.innerHTML = '*'
-                star.setAttribute('class',color[c%7])
-                document.body.appendChild(star)
-                // star.style.color = color[c%7]
-            }
-            c++
-            br = document.createElement('br')
-            document.body.appendChild(br)
+        c++
+        let br = document.createElement('br')
+        document.body.appendChild(br)
+    }
+    for (let i = size - 1; i > 0; i--) {
+        for (let j = size; j > i; j--) {
+            space = document.createElement('span')
+            space.innerHTML = '&nbsp'
+            document.body.appendChild(space)
         }
-    </script>
+        for (let k = 0; k < 2 * i - 1; k++) {
+            star = document.createElement('span')
+            star.innerHTML = '*'
+            star.setAttribute('class', color[c % 7])
+            document.body.appendChild(star)
+            // star.style.color = color[c%7]
+        }
+        c++
+        br = document.createElement('br')
+        document.body.appendChild(br)
+    }
+</script>
 </body>
 
 </html>

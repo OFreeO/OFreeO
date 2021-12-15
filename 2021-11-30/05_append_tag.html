@@ -6,42 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .pink{
+        .pink {
             background-color: pink;
         }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded',
-        function(){
-            const divA=document.querySelector('#first')
-            const divB=document.querySelector('#second')
-            const myh1 = document.createElement('h1')
-            myh1.textContent = '이동하는 h1'
-            // class 값을 스크립트를 사용하여 추가했음
+            function () {
+                const divA = document.querySelector('#first')
+                const divB = document.querySelector('#second')
+                const myh1 = document.createElement('h1')
+                myh1.textContent = '이동하는 h1'
+                // class 값을 스크립트를 사용하여 추가했음
 
-            myh1.setAttribute('class','pink')
+                myh1.setAttribute('class', 'pink')
 
-            const toFirst = function()
-            {
-                divA.appendChild(myh1)
-                setTimeout(toSecond, 1000)
-            }
-            const toSecond = function()
-            {
-                divB.appendChild(myh1)
-                setTimeout(toFirst, 2000)
-            }
-            toFirst()
+                const toFirst = function () {
+                    divA.appendChild(myh1)
+                    setTimeout(toSecond, 1000)
+                }
+                const toSecond = function () {
+                    divB.appendChild(myh1)
+                    setTimeout(toFirst, 2000)
+                }
+                toFirst()
 
-        })
+            })
     </script>
 </head>
 <body>
-    <div id="first">
-        <h1>첫번째 div 내부</h1>
-    </div>
-    <div id="second">
-        <h1>두번째 div 내부</h1>
-    </div>
+<div id="first">
+    <h1>첫번째 div 내부</h1>
+</div>
+<div id="second">
+    <h1>두번째 div 내부</h1>
+</div>
 </body>
 </html>

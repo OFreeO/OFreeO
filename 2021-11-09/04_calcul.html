@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <script>
-        function MyAdd(){
+        function MyAdd() {
             //id가 one인 태그의 `값`을 가져옴
             let one = document.getElementById("one").value
             let two = document.querySelector("#two").value
 
-            let myinput = [one,two]
+            let myinput = [one, two]
             let myinput2 = []
             myinput2[0] = one
             myinput2[1] = two
@@ -16,12 +16,12 @@
             //value는 문자열이므로
             //숫자로 바꿔서 더해야한다
         }
-    </script>    
+    </script>
 </head>
 <body>
-    <input type="text" id="one">
-    <input type="text" id="two">
-    <button onclick="MyAdd()">두 숫자의 더하기!</button>
+<input type="text" id="one">
+<input type="text" id="two">
+<button onclick="MyAdd()">두 숫자의 더하기!</button>
 
 
 </body>

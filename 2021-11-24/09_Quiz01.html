@@ -7,21 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        let alphabet = 'abcdefghijklmnopqrstuvwxyz'
-        let word = prompt("영단어 입력")
-        let count = 0;
-        for(let j = 0; j<alphabet.length; j++){
-            for(let i = 0; i<word.length; i++){
-                if(word[i] == alphabet[j])
+<script>
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    let word = prompt("영단어 입력")
+    let count = 0;
+    for (let j = 0; j < alphabet.length; j++) {
+        for (let i = 0; i < word.length; i++) {
+            if (word[i] == alphabet[j])
                 count++
-            }
-            if(count == 0){
-                continue
-            }
-            console.log(alphabet[j]+"은 총"+count+"만큼 들어가있어!")
-            count = 0
         }
-    </script>
+        if (count == 0) {
+            continue
+        }
+        console.log(alphabet[j] + "은 총" + count + "만큼 들어가있어!")
+        count = 0
+    }
+</script>
 </body>
 </html>

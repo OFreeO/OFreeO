@@ -9,13 +9,13 @@
         document.addEventListener('DOMContentLoaded', () => {
             const myh1 = document.querySelector('h1')
             const myprint = (myevent) => {
-                    let myoutput = ''
-                    myoutput += `alt:${myevent.altKey}<br>`
-                    myoutput += `ctrl:${myevent.ctrlKey}<br>`
-                    myoutput += `shift:${myevent.shiftKey}<br>`
-                    myoutput += `code:${typeof(myevent.code) !== 'undefined' ?
+                let myoutput = ''
+                myoutput += `alt:${myevent.altKey}<br>`
+                myoutput += `ctrl:${myevent.ctrlKey}<br>`
+                myoutput += `shift:${myevent.shiftKey}<br>`
+                myoutput += `code:${typeof (myevent.code) !== 'undefined' ?
                     myevent.code : event.KeyCode} <br>`
-                    myh1.innerHTML = myoutput
+                myh1.innerHTML = myoutput
             }
             document.addEventListener('keydown', myprint)
             document.addEventListener('keyup', myprint)
@@ -23,6 +23,6 @@
     </script>
 </head>
 <body>
-    <h1></h1>
+<h1></h1>
 </body>
 </html>

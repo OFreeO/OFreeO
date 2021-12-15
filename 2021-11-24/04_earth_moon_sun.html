@@ -6,43 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        window.onload = function(){
+        window.onload = function () {
             let sun = document.getElementById('sun')
             let earth = document.getElementById('earth')
             let moon = document.getElementById('moon')
             let doge = document.getElementById('doge')
-            
+
             sun.style.position = "fixed"
             earth.style.position = 'fixed'
             moon.style.position = 'fixed'
             doge.style.position = 'fixed'
-            sun.style.left = 400+'px'
-            sun.style.top = 200+'px'
+            sun.style.left = 400 + 'px'
+            sun.style.top = 200 + 'px'
             let earthAngle = 0;
             let moonAngle = 0;
             let dogeAngle = 0;
-            setInterval(function(){
-                let earthLeft = 400 + 150*Math.cos(earthAngle)
-                let earthTop = 200 + 150*Math.sin(earthAngle)
+            setInterval(function () {
+                let earthLeft = 400 + 150 * Math.cos(earthAngle)
+                let earthTop = 200 + 150 * Math.sin(earthAngle)
 
                 let dogeLeft = 400 + 232 * Math.cos(dogeAngle)
                 let dogeTop = 200 + 232 * Math.sin(dogeAngle)
 
-                let moonLeft = earthLeft+50*Math.cos(moonAngle)
-                let moonTop = earthTop+50*Math.sin(moonAngle)
+                let moonLeft = earthLeft + 50 * Math.cos(moonAngle)
+                let moonTop = earthTop + 50 * Math.sin(moonAngle)
 
-                
+
                 earth.style.left = earthLeft + 'px'
                 earth.style.top = earthTop + 'px'
                 moon.style.left = moonLeft + 'px'
                 moon.style.top = moonTop + 'px'
-                doge.style.left = dogeLeft +'px'
+                doge.style.left = dogeLeft + 'px'
                 doge.style.top = dogeTop + 'px'
 
                 earthAngle += 0.1
                 moonAngle += 0.3
                 dogeAngle += 0.056
-            }, 1000/30)
+            }, 1000 / 30)
         }
     </script>
     <script>
@@ -53,11 +53,11 @@
     </script>
 </head>
 <body>
-    <div>
-        <h1 id="sun"><img src="태양.png" width="100" height="100" alt=""></h1>
-        <h1 id="earth"><img src="지구.jpg" width="50" height="50" alt=""></h1>
-        <h1 id="moon"><img src="달.jpg" width="25" height="25" alt=""></h1>
-        <h1 id="doge"><img src="화성.jpg" width="75" height="50" alt=""></h1>
-    </div>
+<div>
+    <h1 id="sun"><img src="태양.png" width="100" height="100" alt=""></h1>
+    <h1 id="earth"><img src="지구.jpg" width="50" height="50" alt=""></h1>
+    <h1 id="moon"><img src="달.jpg" width="25" height="25" alt=""></h1>
+    <h1 id="doge"><img src="화성.jpg" width="75" height="50" alt=""></h1>
+</div>
 </body>
 </html>

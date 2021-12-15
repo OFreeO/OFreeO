@@ -10,26 +10,28 @@
 </head>
 
 <body>
-    <script>
-        // $ == document
-        // $().ready(function(){}) == window.onload
-        $().ready(
-            function () {
-                $('#first').css('color', 'red')
-                let aaa = $('#first')
-                // JQ의 click = js의 onclick
-                aaa.click ( function () {
-                    alert('aaaa')
-                
-                })
-                // JQ의 on = JS의 addEventListner
-                let second = $('#second')
-                second.on("click",function(){alert('bbbb')})
-            })
-    </script>
+<script>
+    // $ == document
+    // $().ready(function(){}) == window.onload
+    $().ready(
+        function () {
+            $('#first').css('color', 'red')
+            let aaa = $('#first')
+            // JQ의 click = js의 onclick
+            aaa.click(function () {
+                alert('aaaa')
 
-    <h1 id="first">Lorem ipsum dolor sit amet.</h1>
-    <h1 id="second">Lorem ipsum dolor sit amet.</h1>
+            })
+            // JQ의 on = JS의 addEventListner
+            let second = $('#second')
+            second.on("click", function () {
+                alert('bbbb')
+            })
+        })
+</script>
+
+<h1 id="first">Lorem ipsum dolor sit amet.</h1>
+<h1 id="second">Lorem ipsum dolor sit amet.</h1>
 </body>
 
 </html>

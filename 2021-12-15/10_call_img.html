@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!--"https://picsum.photos/id/1025/600/400"
+"https://picsum.photos/id/1020/600/400"
+"https://picsum.photos/id/1003/600/400" -->
+    <title>Document</title>
+</head>
+<body id="root">
+    <script type="text/babel">
+        const container = document.getElementById('root')
+        const name = prompt('이름이 뭐니?')
+        let imgUrl
+        let component
+        if(name=='개')
+        {
+            imgUrl = "https://picsum.photos/id/1025/600/400"
+            component = <div>
+                <h1>이건 {name}</h1>
+                <img src={imgUrl}/>
+                </div>
+            }
+        else if(name =='곰')
+        {
+            imgUrl = "https://picsum.photos/id/1020/600/400"
+            component = <div>
+                <h1>이건 {name}</h1>
+                <img src={imgUrl}/>
+                </div>
+            }
+            else if(name =='사슴')
+        {
+            imgUrl = "https://picsum.photos/id/1003/600/400"
+            component = <div>
+                <h1>이건 {name}</h1>
+                <img src={imgUrl}/>
+                </div>
+            }
+        else{
+            component = <h1>그런거 없다.</h1>
+        }
+        ReactDOM.render(component,container)
+    </script>
+    
+</body>
+</html>

@@ -9,80 +9,79 @@
             this.master = m
             this.number = num
             this.age = a
-            this.regist = function()
-            {
+            this.regist = function () {
                 alert(`${num}번 동물은 등록되었습니다.`
-                +`(${k},${n},${m},${a})`)
+                    + `(${k},${n},${m},${a})`)
             }
         }
     </script>
 </head>
 
 <body>
-    동물 종류<input type="text" id="kind"><br>
-    동물 이름<input type="text" id="name"><br>
-    주인분 성함<input type="text" id="master"><br>
-    번호<input type="text" id="number"><br>
-    나이<input type="text" id="age"><br>
+동물 종류<input type="text" id="kind"><br>
+동물 이름<input type="text" id="name"><br>
+주인분 성함<input type="text" id="master"><br>
+번호<input type="text" id="number"><br>
+나이<input type="text" id="age"><br>
 
-    <button id="save">저장하기</button>
-    <button id="show">조회하기</button>
-    <button id="nshow">이름조회</button>
-    <button id="kshow">종류조회</button>
-    <script>
-        let Animal = []
-        let btn = document.querySelector('#save')
-        btn.onclick = function () {
-            let k = document.querySelector('#kind').value
-            let n = document.querySelector('#name').value
-            let m = document.querySelector('#master').value
-            let num = document.querySelector('#number').value
-            let a = document.querySelector('#age').value
-            for(let item of Animal){
-                if(item.number == num){
-                    alert("중복된 동물의 번호!")
-                    return
-                }
-            }
-            Animal.push({
-                kind: k,
-                name: n,
-                master: m,
-                number: num,
-                age: a
-                })
-            console.log(Animal)
-        }
-        let btn2 = document.querySelector('#show')
-        let num = document.querySelector('#number')
-        btn2.onclick = function(){
-            for(let item of Animal){
-                if(item.number == num.value){
-                    alert(`${item.number}번의 동물 종류는 ${item.kind}이며 ${item.age}살이며 이름은 ${item.name}이고 주인분 성함은 ${item.master}입니다.`)
-                }
-        }
-        }
-        let k = document.querySelector('#kind')
-        let btn3 = document.querySelector('#kshow')
-        btn3.onclick = function(){
-           // alert(k.value)
-            for (let item of Animal){
-                if(item.kind == k.value){
-                    console.log(item.kind,item.name,item.master,item.number,item.age)
-                }
+<button id="save">저장하기</button>
+<button id="show">조회하기</button>
+<button id="nshow">이름조회</button>
+<button id="kshow">종류조회</button>
+<script>
+    let Animal = []
+    let btn = document.querySelector('#save')
+    btn.onclick = function () {
+        let k = document.querySelector('#kind').value
+        let n = document.querySelector('#name').value
+        let m = document.querySelector('#master').value
+        let num = document.querySelector('#number').value
+        let a = document.querySelector('#age').value
+        for (let item of Animal) {
+            if (item.number == num) {
+                alert("중복된 동물의 번호!")
+                return
             }
         }
-        let n = document.querySelector('#name')
-        let btn4 = document.querySelector('#nshow')
-        btn4.onclick = function(){
-           // alert(n.value)
-            for(let item of Animal){
-                if(item.name == n.value){
-                    console.log(item.kind,item.name,item.master,item.number,item.age)
-                }
+        Animal.push({
+            kind: k,
+            name: n,
+            master: m,
+            number: num,
+            age: a
+        })
+        console.log(Animal)
+    }
+    let btn2 = document.querySelector('#show')
+    let num = document.querySelector('#number')
+    btn2.onclick = function () {
+        for (let item of Animal) {
+            if (item.number == num.value) {
+                alert(`${item.number}번의 동물 종류는 ${item.kind}이며 ${item.age}살이며 이름은 ${item.name}이고 주인분 성함은 ${item.master}입니다.`)
             }
         }
-    </script>
+    }
+    let k = document.querySelector('#kind')
+    let btn3 = document.querySelector('#kshow')
+    btn3.onclick = function () {
+        // alert(k.value)
+        for (let item of Animal) {
+            if (item.kind == k.value) {
+                console.log(item.kind, item.name, item.master, item.number, item.age)
+            }
+        }
+    }
+    let n = document.querySelector('#name')
+    let btn4 = document.querySelector('#nshow')
+    btn4.onclick = function () {
+        // alert(n.value)
+        for (let item of Animal) {
+            if (item.name == n.value) {
+                console.log(item.kind, item.name, item.master, item.number, item.age)
+            }
+        }
+    }
+</script>
 </body>
 
 </html>

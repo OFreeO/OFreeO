@@ -10,10 +10,11 @@
     </script>
 </head>
 <body>
-    <p>몇월에 태어나셨나요?</p>
-    <input type="text"> <button>계절사진보기</button>
-    <script>
-        //인위적으로 태그 추가 1
+<p>몇월에 태어나셨나요?</p>
+<input type="text">
+<button>계절사진보기</button>
+<script>
+    //인위적으로 태그 추가 1
     //   let a = document.createElement('h1')
     //     let mytext = document.createTextNode('계절사진은?')
     //     a.appendChild(mytext)
@@ -26,67 +27,66 @@
     //     let a3 = document.createElement('hi')
     //     a3.innerText = "이제"+"<br>"+"보여줘."
     //     document.body.appendChild(a3)  
-        
-        let myphoto = document.createElement('img')
 
-        let mybtn = document.querySelector('button')
+    let myphoto = document.createElement('img')
 
-        mybtn.onclick = function()
-        {
-            let mymonth = document.querySelector('input')
-            mymonth = Number(mymonth.value)
-            // alert(mymonth)
-            switch (mymonth) {
-                case 12:
-                case 1:
-                case 2:
-                    myphoto.src = "https://cdn.pixabay.com/photo/2016/08/09/21/54/lake-1581879__480.jpg"
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    myphoto.src = "https://cdn.pixabay.com/photo/2014/12/04/14/46/magnolia-trees-556718_960_720.jpg"
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    myphoto.src = "https://cdn.pixabay.com/photo/2018/11/03/21/42/sunflowers-3792914__340.jpg"
-                    break;
-                case 9:
-                case 10:
-                case 11:
-                    myphoto.src = "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg"
-                    break;
-                default:
-                    break;
-            }
-            document.body.appendChild(myphoto)
+    let mybtn = document.querySelector('button')
 
-            let myseason = []
-            myseason[0] = "https://cdn.pixabay.com/photo/2016/08/09/21/54/lake-1581879__480.jpg"
-            myseason[1] = "https://cdn.pixabay.com/photo/2014/12/04/14/46/magnolia-trees-556718_960_720.jpg"
-            myseason[2] = "https://cdn.pixabay.com/photo/2018/11/03/21/42/sunflowers-3792914__340.jpg"
-            myseason[3] = "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg"
-            
-            let myMonth = [[12,1,2],[3,4,5],[6,7,8],[9,10,11]]
+    mybtn.onclick = function () {
+        let mymonth = document.querySelector('input')
+        mymonth = Number(mymonth.value)
+        // alert(mymonth)
+        switch (mymonth) {
+            case 12:
+            case 1:
+            case 2:
+                myphoto.src = "https://cdn.pixabay.com/photo/2016/08/09/21/54/lake-1581879__480.jpg"
+                break;
+            case 3:
+            case 4:
+            case 5:
+                myphoto.src = "https://cdn.pixabay.com/photo/2014/12/04/14/46/magnolia-trees-556718_960_720.jpg"
+                break;
+            case 6:
+            case 7:
+            case 8:
+                myphoto.src = "https://cdn.pixabay.com/photo/2018/11/03/21/42/sunflowers-3792914__340.jpg"
+                break;
+            case 9:
+            case 10:
+            case 11:
+                myphoto.src = "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg"
+                break;
+            default:
+                break;
+        }
+        document.body.appendChild(myphoto)
 
-            let mytestphoto = document.createElement('img')
+        let myseason = []
+        myseason[0] = "https://cdn.pixabay.com/photo/2016/08/09/21/54/lake-1581879__480.jpg"
+        myseason[1] = "https://cdn.pixabay.com/photo/2014/12/04/14/46/magnolia-trees-556718_960_720.jpg"
+        myseason[2] = "https://cdn.pixabay.com/photo/2018/11/03/21/42/sunflowers-3792914__340.jpg"
+        myseason[3] = "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg"
 
-            let index = -1
-            for(let i = 0; i < 4; i++){
-                for(let j = 0; j < 3; j++){
-                    let find = myMonth[i].indexOf(mymonth)
-                    if(find != -1){
-                        index = i
-                        console.log(index)
-                        break;
-                    }
+        let myMonth = [[12, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10, 11]]
+
+        let mytestphoto = document.createElement('img')
+
+        let index = -1
+        for (let i = 0; i < 4; i++) {
+            for (let j = 0; j < 3; j++) {
+                let find = myMonth[i].indexOf(mymonth)
+                if (find != -1) {
+                    index = i
+                    console.log(index)
+                    break;
                 }
             }
-            mytestphoto.src = myseason[index]
-            document.body.appendChild(mytestphoto)
         }
+        mytestphoto.src = myseason[index]
+        document.body.appendChild(mytestphoto)
+    }
 
-    </script>
+</script>
 </body>
 </html>

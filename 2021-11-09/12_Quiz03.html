@@ -6,31 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function math1(){
+        function math1() {
             let one = document.getElementById('one').value
             let two = document.getElementById('two').value
 
-            alert(Number(one)-(Number(two)))
+            alert(Number(one) - (Number(two)))
         }
-        function math2(){
+
+        function math2() {
             let one = document.getElementById('one').value
             let two = document.getElementById('two').value
 
-            alert(Number(one)*(Number(two)))
+            alert(Number(one) * (Number(two)))
         }
-        function math3(){
+
+        function math3() {
             let one = document.getElementById('one').value
             let two = document.getElementById('two').value
 
-            alert(Number(one)/(Number(two)))
+            alert(Number(one) / (Number(two)))
         }
     </script>
 </head>
 <body>
-    <input type="text" id="one">
-    <input type="text" id="two">
-    <button onclick="math1()">빼기</button>
-    <button onclick="math2()">곱하기</button>
-    <button onclick="math3()">나누기</button>
+<input type="text" id="one">
+<input type="text" id="two">
+<button onclick="math1()">빼기</button>
+<button onclick="math2()">곱하기</button>
+<button onclick="math3()">나누기</button>
 </body>
 </html>

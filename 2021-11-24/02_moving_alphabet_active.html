@@ -4,71 +4,71 @@
     <script>
         //임의의 정숫값을 뽑는 함수 호출
 
-        function nextRandomInteger(limit){
+        function nextRandomInteger(limit) {
             //round(반올림)
-            return Math.round(Math.random()*limit)
+            return Math.round(Math.random() * limit)
         }
-        let randomWord = (function()
-            {
+
+        let randomWord = (function () {
 
             let Words1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
             let Words2 = '가나다라마바사아자차카타파하'
             let Words3 = 'アイウエオカキクケコタチツテト'
-            
-            const lang = [Words1,Words2,Words3]
-            return function(){
-                const myalpha = lang[nextRandomInteger(2)]
-                return myalpha.charAt(nextRandomInteger(myalpha.length-1))
-                }
-            })()
 
-        function randomSpeed(maxSpeed){
-            return Math.random()*maxSpeed - Math.random()*maxSpeed
+            const lang = [Words1, Words2, Words3]
+            return function () {
+                const myalpha = lang[nextRandomInteger(2)]
+                return myalpha.charAt(nextRandomInteger(myalpha.length - 1))
+            }
+        })()
+
+        function randomSpeed(maxSpeed) {
+            return Math.random() * maxSpeed - Math.random() * maxSpeed
         }
     </script>
     <script>
         let canvasWidth = 700
         let canvasHeight = 400
-        function MovingText(param)
-        {  
+
+        function MovingText(param) {
             this.x = nextRandomInteger(canvasWidth)
             this.y = nextRandomInteger(canvasHeight)
             this.vx = randomSpeed(10)
             this.vy = randomSpeed(10)
             this.b = document.createElement('h1')
 
-            if(!param)
+            if (!param)
                 this.b.innerText = randomWord()
             else
                 this.b.innerText = param
 
             this.b.style.position = 'fixed'
             document.body.appendChild(this.b)
-        
-                    this.Color = function(){
-                        let r = Math.floor(Math.random()*256)
-                        let g = Math.floor(Math.random()*256)
-                        let b = Math.floor(Math.random()*256)
-                        let temp = `rgb(${r},${g},${b})`
-                        console.log(temp)
-                        this.b.style.color = temp
-                        document.body.style.backgroundColor = temp
-                    }
-                }
-            MovingText.prototype.move = function() {
-                if(this.x<0 || this.x>canvasWidth)
-                    this.vx *= -1
-                    if(this.y<0 || this.y>canvasHeight)
-                        this.vy *= -1
-                        this.x += this.vx
-                        this.y += this.vy
-                        this.b.style.left = this.x+'px'
-                        this.b.style.top = this.y+'px'
-                    }
+
+            this.Color = function () {
+                let r = Math.floor(Math.random() * 256)
+                let g = Math.floor(Math.random() * 256)
+                let b = Math.floor(Math.random() * 256)
+                let temp = `rgb(${r},${g},${b})`
+                console.log(temp)
+                this.b.style.color = temp
+                document.body.style.backgroundColor = temp
+            }
+        }
+
+        MovingText.prototype.move = function () {
+            if (this.x < 0 || this.x > canvasWidth)
+                this.vx *= -1
+            if (this.y < 0 || this.y > canvasHeight)
+                this.vy *= -1
+            this.x += this.vx
+            this.y += this.vy
+            this.b.style.left = this.x + 'px'
+            this.b.style.top = this.y + 'px'
+        }
     </script>
     <script>
-        window.onload = function()
-        {
+        window.onload = function () {
             let adder = document.querySelector('#textbtn')
             let input = document.querySelector('#AddText')
             adder.onclick = () => {
@@ -77,12 +77,11 @@
             let movingTexts = []
             // let mycolors = ['red','green','blue']
             // let backcolor = ['pink','yellow']
-            for(let i = 0 ; i < 100 ; i++){
+            for (let i = 0; i < 100; i++) {
                 movingTexts.push(new MovingText())
             }
-            setInterval(function()
-            {
-                for(let i in movingTexts){
+            setInterval(function () {
+                for (let i in movingTexts) {
                     movingTexts[i].move()
                     // movingTexts[i].Color()
                     movingTexts[i].b.style.color = `rgb(${nextRandomInteger(256)},${nextRandomInteger(256)},${nextRandomInteger(256)})`
@@ -90,20 +89,19 @@
                     // movingTexts[i].b.style.color = mycolors[nextRandomInteger(2)]
                     // document.body.style.backgroundColor = backcolor[nextRandomInteger(1)]
                 }
-            }, 1000/30)
+            }, 1000 / 30)
         }
-        </script>
-        <style>
-            button,input
-            {
-                left : 0px;
-                top : 500px;
-                position: relative;
-            }
-        </style>
+    </script>
+    <style>
+        button, input {
+            left: 0px;
+            top: 500px;
+            position: relative;
+        }
+    </style>
 </head>
 <body>
-    <input type="text" id="AddText">
-    <button id="textbtn">원하는 글자 추가</button>
+<input type="text" id="AddText">
+<button id="textbtn">원하는 글자 추가</button>
 </body>
 </html>

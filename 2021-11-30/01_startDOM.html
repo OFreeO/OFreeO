@@ -6,25 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .border{border: 3px solid red}
+        .border {
+            border: 3px solid red
+        }
     </style>
     <script>
         // window.onload = function()
-        document.addEventListener('DOMContentLoaded', function()
-        {
+        document.addEventListener('DOMContentLoaded', function () {
             let ab = document.querySelector('#ab')
             ab.style.color = 'red'
             let img = document.querySelector('img')
-            img.setAttribute('src','https://picsum.photos/id/1025/600/400')
-            img.setAttribute('class','border radius')
+            img.setAttribute('src', 'https://picsum.photos/id/1025/600/400')
+            img.setAttribute('class', 'border radius')
             // getAttribute(특정 속성값)을 가져옴
             alert(img.getAttribute('class'))
         })
     </script>
 </head>
 <body>
-    <img class = "border" src="" alt="">
-    <h1 id="ab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, cum!</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, obcaecati?</h1>
+<img class="border" src="" alt="">
+<h1 id="ab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, cum!</h1>
+<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, obcaecati?</h1>
 </body>
 </html>

@@ -5,23 +5,23 @@
     <img id="myImg">
     <script>
         let inch = prompt("몇인치?")
-        console.log(`1번문제.\n입력한 값 : ${inch}inch \n변환된 값 : ${inch*2.54}cm`)
+        console.log(`1번문제.\n입력한 값 : ${inch}inch \n변환된 값 : ${inch * 2.54}cm`)
         let cm = prompt("몇센치?")
-        console.log(`2번문제.\n입력한 값 : ${cm}cm\n변환된 값 : ${cm*0.393701}inch`)
+        console.log(`2번문제.\n입력한 값 : ${cm}cm\n변환된 값 : ${cm * 0.393701}inch`)
         let half = prompt("반지름은?")
         const PI = 3.14
-        console.log(`3번문제.\n입력한 값 : ${half}cm\n원의 넓이 : ${(half*half)*PI}cm\n원의 둘레 : ${(half*2)*PI}cm`)
+        console.log(`3번문제.\n입력한 값 : ${half}cm\n원의 넓이 : ${(half * half) * PI}cm\n원의 둘레 : ${(half * 2) * PI}cm`)
         let dol = prompt("몇달러?")
         const kr = 1207
-        console.log(`4번문제.\n입력한 값 : ${dol}\n환전 값 : ${kr*dol}KRW`)
+        console.log(`4번문제.\n입력한 값 : ${dol}\n환전 값 : ${kr * dol}KRW`)
         let birth = prompt("몇년생?")
         const gz = ("경신임계갑을병정무기")
         const gs = ("신유술해자축인묘진사오미")
         let myImage = document.getElementById('myImg')
         console.log(`5번 문제.\n입력값 : ${birth}`)
-        b1 = birth%10
+        b1 = birth % 10
 
-        b2 = Math.floor(birth%12)
+        b2 = Math.floor(birth % 12)
         document.writeln("당신의 띠!")
         console.log(`간지 : ${gz[b1]}\n지신 : ${gs[b2]}`)
         switch (b2) {
@@ -61,7 +61,7 @@
             case 11:
                 myImage.src = '11.png'
                 break;
-        
+
             default:
                 break;
         }

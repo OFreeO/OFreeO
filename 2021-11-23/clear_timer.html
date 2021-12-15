@@ -4,18 +4,18 @@
 
 </head>
 <body>
-    <script>
-        let timerid
-        let count = 0
-        timerid = setInterval(() =>{
-            count++
-            console.log("count = "+count)
-        }, 1*1000); //1ms = 1/1000초 1000ms = 1초
+<script>
+    let timerid
+    let count = 0
+    timerid = setInterval(() => {
+        count++
+        console.log("count = " + count)
+    }, 1 * 1000); //1ms = 1/1000초 1000ms = 1초
 
-        setTimeout(()=>{
-            console.log("이제그만~")
-            clearInterval(timerid)
-        }, 10*1000)
-    </script>
+    setTimeout(() => {
+        console.log("이제그만~")
+        clearInterval(timerid)
+    }, 10 * 1000)
+</script>
 </body>
 </html>

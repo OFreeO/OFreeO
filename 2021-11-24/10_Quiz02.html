@@ -7,22 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        
-        let alphabet = 'abcdefghijklmnopqrstuvwxyz'
-        let count = 1
-        array = prompt("영단어를 입력해줘!")
-        for(let i = 0; i < alphabet.length; i++){
-            for(let j = 0; j < array.length; j++){
-                if(alphabet[i] == array[j]){
-                    alert(alphabet[i]+"는"+count+"번째에 처음 등장해!")
-                    continue
-                }
-                count++
+<script>
+
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    let count = 1
+    array = prompt("영단어를 입력해줘!")
+    for (let i = 0; i < alphabet.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (alphabet[i] == array[j]) {
+                alert(alphabet[i] + "는" + count + "번째에 처음 등장해!")
+                continue
             }
-            count = 1
-            j = 0
+            count++
         }
-    </script>
+        count = 1
+        j = 0
+    }
+</script>
 </body>
 </html>

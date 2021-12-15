@@ -6,23 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        button{
+        button {
             width: 30px;
             height: 30px;
             margin-left: 20px;
             font-size: 20px;
         }
-        #answer,#submit,#cancel{
+
+        #answer, #submit, #cancel {
             width: 100px;
             height: 50px;
             font-size: 20px;
         }
-        #input{
+
+        #input {
             position: fixed;
             top: 50px;
             left: 150px;
         }
-        #time{
+
+        #time {
             position: fixed;
             top: 50px;
             left: 500px;
@@ -30,118 +33,114 @@
     </style>
 </head>
 <body>
-    <div style="height: 60px;">
-        <h1 id="output" style="margin-left: 170px;"></h1>
-    </div>
-    <div>
-        <div style="margin-bottom: 20px;">
+<div style="height: 60px;">
+    <h1 id="output" style="margin-left: 170px;"></h1>
+</div>
+<div>
+    <div style="margin-bottom: 20px;">
         <button class="choiceValue">0</button>
         <button class="choiceValue">1</button>
         <button class="choiceValue">2</button>
         <button class="choiceValue">3</button>
         <button class="choiceValue">4</button>
     </div>
-        <div style="margin-bottom: 20px;"></div>
-        <button class="choiceValue">5</button>
-        <button class="choiceValue">6</button>
-        <button class="choiceValue">7</button>
-        <button class="choiceValue">8</button>
-        <button class="choiceValue">9</button>
+    <div style="margin-bottom: 20px;"></div>
+    <button class="choiceValue">5</button>
+    <button class="choiceValue">6</button>
+    <button class="choiceValue">7</button>
+    <button class="choiceValue">8</button>
+    <button class="choiceValue">9</button>
 </div>
 <br>
-    <button id="cancel" style="margin-left: 20px;">취소</button>
-    <button id="submit" style="margin-left: 20px;">제출</button>
-    <div style="height: 60px;">
-        <h3 id="input" style="margin-left: 170px;"></h3>
-        <h5 id="time"></h5>
-    </div>
+<button id="cancel" style="margin-left: 20px;">취소</button>
+<button id="submit" style="margin-left: 20px;">제출</button>
+<div style="height: 60px;">
+    <h3 id="input" style="margin-left: 170px;"></h3>
+    <h5 id="time"></h5>
+</div>
 
-    <button id="answer">
-        정답은?
-    </button>
-    <script>
-        //정답생성
-        let array = []
-        let input = 0
-        let output = ''
-        do {
-            input = Math.floor(Math.random()*10)
-            const idx = array.indexOf(input)
-            if(idx == -1){
-                array.push(input)
-                output+=input
-            }
-        } while (array.length<3);//3글자만 가져간다
-        
-        let buttons = document.getElementsByClassName('choiceValue')
-
-        function shuffleNewNumber()
-        {
-            for(let i = 0; i < buttons.length; i++)
-            {
-                buttons[i].style.color = ''
-            }
-            
-            array = []
-            input = 0
-            output = ''
-            do {
-            input = Math.floor(Math.random()*10)
-            const idx = array.indexOf(input)
-            if(idx == -1){
-                array.push(input)
-                output+=input
-            }
-            
-        
-    
-
-        let cancel = document.getElementById('cancel')
-        let submit = document.getElementById('submit')
-        let h1output = document.getElementById('output')
-        let h3input = document.getElementById('input')
-        let answer = document.getElementById('answer')
-        let time = document.getElementById('time')
-        let count = 0
-        let timecount = 0
-
-        
-        let timecountInterval = setInterval(
-            function(){
-                timecount++
-                time.innerText = timecount
-            }, 150
-        )
-
-        for (let i = 0; i < buttons.length; i++){
-
-            buttons[i].addEventListener('click',()=>{
-
-                if(h1output.innerHTML.includes(i)==false){
-
-                    if(h1output.innerHTML.length<3){
-
-                        h1output.innerHTML += i
-
-                    }
-                }
-            })
+<button id="answer">
+    정답은?
+</button>
+<script>
+    //정답생성
+    let array = []
+    let input = 0
+    let output = ''
+    do {
+        input = Math.floor(Math.random() * 10)
+        const idx = array.indexOf(input)
+        if (idx == -1) {
+            array.push(input)
+            output += input
         }
-    
-        cancel.addEventListener('click',function(){
-            h1output.innerHTML = ''
-            answer.innerHTML = '정답은?'
-        })
-        answer.addEventListener('click',function(){
+    } while (array.length < 3);//3글자만 가져간다
 
-            this.innerHTML = '정답은' +output
-        })
+    let buttons = document.getElementsByClassName('choiceValue')
 
-        submit.addEventListener('click',function(){
-            
-        })
+    function shuffleNewNumber() {
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].style.color = ''
+        }
 
-    </script>
+        array = []
+        input = 0
+        output = ''
+        do {
+            input = Math.floor(Math.random() * 10)
+            const idx = array.indexOf(input)
+            if (idx == -1) {
+                array.push(input)
+                output += input
+            }
+
+
+            let cancel = document.getElementById('cancel')
+            let submit = document.getElementById('submit')
+            let h1output = document.getElementById('output')
+            let h3input = document.getElementById('input')
+            let answer = document.getElementById('answer')
+            let time = document.getElementById('time')
+            let count = 0
+            let timecount = 0
+
+
+            let timecountInterval = setInterval(
+                function () {
+                    timecount++
+                    time.innerText = timecount
+                }, 150
+            )
+
+            for (let i = 0; i < buttons.length; i++) {
+
+                buttons[i].addEventListener('click', () => {
+
+                    if (h1output.innerHTML.includes(i) == false) {
+
+                        if (h1output.innerHTML.length < 3) {
+
+                            h1output.innerHTML += i
+
+                        }
+                    }
+                })
+            }
+
+            cancel.addEventListener('click', function () {
+                h1output.innerHTML = ''
+                answer.innerHTML = '정답은?'
+            })
+            answer.addEventListener('click', function () {
+
+                this.innerHTML = '정답은' + output
+            })
+
+            submit.addEventListener('click', function () {
+
+            })
+
+</script>
 
 </body>
 </html>

@@ -5,185 +5,180 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <!-- 풀 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBWh9HuQPWpCDYQjsL99BGJzlz7brFGVbI-QQIklq6CY_HloK1TEf_dRL5n49wErXC4jo&usqp=CAU-->
+    <!-- 풀 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBWh9HuQPWpCDYQjsL99BGJzlz7brFGVbI-QQIklq6CY_HloK1TEf_dRL5n49wErXC4jo&usqp=CAU-->
     <!-- 불 https://w.namu.la/s/5e70887d703d6f2701d10afe6ff88a37ce82c4333e9dfa54dccf6e8604b96d448b4f77063d513325da017dbfe5cbd038fcec0d43b0511a8f60a493458ab7168fce5346b79f01e95acb304a93b4454370 -->
     <!-- 물 https://ww.namu.la/s/a4754e60103798fdbb0a47cd99225fe7eade851b0443ad490a5aa95efb2e0a026a137ab61580da18f1d1299da14bba683f71116d3cfe15d33f1ffbb6c408d6c4922b20ece13433fb2d0843e7af318ce3 -->
     <!-- 치코리타 https://lh3.googleusercontent.com/proxy/wJDXHPM6wA4HxPkvvIMo9uZam-x22zpEqqWfdFRQWiZxgMEB3G69DAiyJQMNyx3haTX_Eyuaq-qQwIwJo3Qlwaf2SOKFVuqIZhuhvaf7yet-y6pBbD07M4jaKGvvwjO-0i4xYPQ_Vf20GfJ03vadtA -->
 </head>
 <body>
-    <button class="p" id="fire">불타입</button>
-    <button class="p" id="water">물타입</button>
-    <button class="p" id="leaf">풀타입</button>
-    <br>
-    <button class="g" id="1">1세대</button>
-    <button class="g" id="2">2세대</button>
-    <button class="g" id="3">3세대</button>
-    <button class="g" id="4">4세대</button>
-    <button class="g" id="5">5세대</button>
-    <button class="g" id="6">6세대</button>
-    <button class="g" id="7">7세대</button>
-    <button class="g" id="8">8세대</button>
-    <br>
-    <button id="my_battle_result">배틀시작</button>
+<button class="p" id="fire">불타입</button>
+<button class="p" id="water">물타입</button>
+<button class="p" id="leaf">풀타입</button>
+<br>
+<button class="g" id="1">1세대</button>
+<button class="g" id="2">2세대</button>
+<button class="g" id="3">3세대</button>
+<button class="g" id="4">4세대</button>
+<button class="g" id="5">5세대</button>
+<button class="g" id="6">6세대</button>
+<button class="g" id="7">7세대</button>
+<button class="g" id="8">8세대</button>
+<br>
+<button id="my_battle_result">배틀시작</button>
 
-    <h1>결과는?</h1>
-    <h1 id="my_battle_result"></h1>
-    <h1>나의 포켓몬</h1>
-    <img id="me">
-    <h1>너의 포켓몬</h1>
-    <img id="pc">
-    <script>
-        let my_type = "-"
-        let my_gen = "-"
-        const Fire = 0
-        const Water = 1
-        const Leaf = 2
-        const trash = 3
-        let type = []
-        type[Fire] = "https://w.namu.la/s/5e70887d703d6f2701d10afe6ff88a37ce82c4333e9dfa54dccf6e8604b96d448b4f77063d513325da017dbfe5cbd038fcec0d43b0511a8f60a493458ab7168fce5346b79f01e95acb304a93b4454370"
-        type[Water] = "https://ww.namu.la/s/a4754e60103798fdbb0a47cd99225fe7eade851b0443ad490a5aa95efb2e0a026a137ab61580da18f1d1299da14bba683f71116d3cfe15d33f1ffbb6c408d6c4922b20ece13433fb2d0843e7af318ce3"
-        type[Leaf] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBWh9HuQPWpCDYQjsL99BGJzlz7brFGVbI-QQIklq6CY_HloK1TEf_dRL5n49wErXC4jo&usqp=CAU"
-        type[trash] = "https://lh3.googleusercontent.com/proxy/wJDXHPM6wA4HxPkvvIMo9uZam-x22zpEqqWfdFRQWiZxgMEB3G69DAiyJQMNyx3haTX_Eyuaq-qQwIwJo3Qlwaf2SOKFVuqIZhuhvaf7yet-y6pBbD07M4jaKGvvwjO-0i4xYPQ_Vf20GfJ03vadtA"
+<h1>결과는?</h1>
+<h1 id="my_battle_result"></h1>
+<h1>나의 포켓몬</h1>
+<img id="me">
+<h1>너의 포켓몬</h1>
+<img id="pc">
+<script>
+    let my_type = "-"
+    let my_gen = "-"
+    const Fire = 0
+    const Water = 1
+    const Leaf = 2
+    const trash = 3
+    let type = []
+    type[Fire] = "https://w.namu.la/s/5e70887d703d6f2701d10afe6ff88a37ce82c4333e9dfa54dccf6e8604b96d448b4f77063d513325da017dbfe5cbd038fcec0d43b0511a8f60a493458ab7168fce5346b79f01e95acb304a93b4454370"
+    type[Water] = "https://ww.namu.la/s/a4754e60103798fdbb0a47cd99225fe7eade851b0443ad490a5aa95efb2e0a026a137ab61580da18f1d1299da14bba683f71116d3cfe15d33f1ffbb6c408d6c4922b20ece13433fb2d0843e7af318ce3"
+    type[Leaf] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBWh9HuQPWpCDYQjsL99BGJzlz7brFGVbI-QQIklq6CY_HloK1TEf_dRL5n49wErXC4jo&usqp=CAU"
+    type[trash] = "https://lh3.googleusercontent.com/proxy/wJDXHPM6wA4HxPkvvIMo9uZam-x22zpEqqWfdFRQWiZxgMEB3G69DAiyJQMNyx3haTX_Eyuaq-qQwIwJo3Qlwaf2SOKFVuqIZhuhvaf7yet-y6pBbD07M4jaKGvvwjO-0i4xYPQ_Vf20GfJ03vadtA"
 
-        function choiceType(choice_type)
-        {
-            my_type = choice_type.target.id;
+    function choiceType(choice_type) {
+        my_type = choice_type.target.id;
+    }
+
+    function choiceGen(choice_gen) {
+        my_gen = choice_gen.target.id;
+    }
+
+    function battle() {
+        if (my_gen == "-" || my_type == "-") {
+            alert("포켓몬을 다시 고르시오")
+            return
         }
-        function choiceGen(choice_gen)
-        {
-            my_gen = choice_gen.target.id;
-        }
+        let me = document.querySelector('#me')
+        let pc = document.querySelector("#pc")
 
-        function battle()
-        {
-            if(my_gen == "-" || my_type == "-")
-            {
-                alert("포켓몬을 다시 고르시오")
-                return
-            }
-            let me = document.querySelector('#me')
-            let pc = document.querySelector("#pc")
-
-            let pc_type = Math.floor(Math.random()*3) 
-            let pc_gen = Math.floor(Math.random()*8)+1
+        let pc_type = Math.floor(Math.random() * 3)
+        let pc_gen = Math.floor(Math.random() * 8) + 1
 
 
-            let my_battle_result
-                = document.querySelector("#my_battle_result")
+        let my_battle_result
+            = document.querySelector("#my_battle_result")
 
 
-            if(pc_gen == 2 && pc_type == Leaf)
-                pc.src = type[trash]
-            else
-                pc.src = type[pc_type]
-
-
-
-            me.src = type[my_type]
+        if (pc_gen == 2 && pc_type == Leaf)
+            pc.src = type[trash]
+        else
             pc.src = type[pc_type]
 
-            switch (my_type) {
-                case 'fire':
-                    me.src = type[Fire]
-                    switch (pc_type) {
-                        case Fire:
-                            my_battle_result.innerText
-                            ="무승부"
-                            break;
-                        case Water:
-                            my_battle_result.innerText
-                            ="패배"
-                            
-                            break;
-                        case Leaf:
-                            my_battle_result.innerText
-                            ="승리"
 
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case 'Water':
-                    me.src = type[Water]
-                    switch (pc_type) {
-                        case Fire:
-                            my_battle_result.innerText
-                            ="승리"
-                            break;
-                        case Water:
-                            my_battle_result.innerText
-                            ="무승부"
-                            
-                            break;
-                        case Leaf:
-                            if(pc_gen == 2){
-                                my_battle_result.innerText
-                                ="승리(치코리타로 인한 승리)"
-                            }
-                            my_battle_result.innerText
-                            ="패배"
+        me.src = type[my_type]
+        pc.src = type[pc_type]
 
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case 'Leaf':
-                    if(my_gen == 2)
-                        me.src = type[trash]
-                    else
-                    me.src = type[Leaf]
-                    switch (pc_type){
-                        case Fire:
-                            my_battle_result.innerText
-                            ="패배"
-                            break;
-                        case Water:
-                            if(my_gen == 2){
-                                my_battle_result.innerText
-                                ="패배(치코리타로 인한 패배)"
-                            }
-                            my_battle_result.innerText
-                            ="승리"
-                            
-                            break;
-                        case Leaf:
-                            if(pc_gen == 2 && my_gen == 2){
-                                my_battle_result.innerText
-                                ="무승부"
-                            }
-                            else if(pc_gen == 2 && my_gen !=2){
-                                my_battle_result.innerText
-                                ="승리(치코리타로 인한 승리)"
-                            }else if(pc_gen != 2 && my_gen == 2){
-                                my_battle_result.innerText
-                                ="패배(치코리타로 인한 패배)"
-                            }
-                            my_battle_result.innerText
-                            ="무승부"
+        switch (my_type) {
+            case 'fire':
+                me.src = type[Fire]
+                switch (pc_type) {
+                    case Fire:
+                        my_battle_result.innerText
+                            = "무승부"
+                        break;
+                    case Water:
+                        my_battle_result.innerText
+                            = "패배"
 
-                            break;
-                        default:
-                            break;
-                    }
+                        break;
+                    case Leaf:
+                        my_battle_result.innerText
+                            = "승리"
+
+                        break;
                     default:
-                    break;
-            }
+                        break;
+                }
+                break;
+            case 'Water':
+                me.src = type[Water]
+                switch (pc_type) {
+                    case Fire:
+                        my_battle_result.innerText
+                            = "승리"
+                        break;
+                    case Water:
+                        my_battle_result.innerText
+                            = "무승부"
+
+                        break;
+                    case Leaf:
+                        if (pc_gen == 2) {
+                            my_battle_result.innerText
+                                = "승리(치코리타로 인한 승리)"
+                        }
+                        my_battle_result.innerText
+                            = "패배"
+
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case 'Leaf':
+                if (my_gen == 2)
+                    me.src = type[trash]
+                else
+                    me.src = type[Leaf]
+                switch (pc_type) {
+                    case Fire:
+                        my_battle_result.innerText
+                            = "패배"
+                        break;
+                    case Water:
+                        if (my_gen == 2) {
+                            my_battle_result.innerText
+                                = "패배(치코리타로 인한 패배)"
+                        }
+                        my_battle_result.innerText
+                            = "승리"
+
+                        break;
+                    case Leaf:
+                        if (pc_gen == 2 && my_gen == 2) {
+                            my_battle_result.innerText
+                                = "무승부"
+                        } else if (pc_gen == 2 && my_gen != 2) {
+                            my_battle_result.innerText
+                                = "승리(치코리타로 인한 승리)"
+                        } else if (pc_gen != 2 && my_gen == 2) {
+                            my_battle_result.innerText
+                                = "패배(치코리타로 인한 패배)"
+                        }
+                        my_battle_result.innerText
+                            = "무승부"
+
+                        break;
+                    default:
+                        break;
+                }
+            default:
+                break;
         }
+    }
 
-        let p_types = document.querySelectorAll(".p")
-        for(let item of p_types)
-            item.onclick = choiceType
+    let p_types = document.querySelectorAll(".p")
+    for (let item of p_types)
+        item.onclick = choiceType
 
-        let gens = document.querySelectorAll(".g")
-        for(let item of gens)
-            item.onclick = choiceGen
+    let gens = document.querySelectorAll(".g")
+    for (let item of gens)
+        item.onclick = choiceGen
 
-        let p_battle = document.querySelector("#my_battle_result")
-        p_battle.onclick = battle
+    let p_battle = document.querySelector("#my_battle_result")
+    p_battle.onclick = battle
 
 
-    </script>
+</script>
 </body>
 </html>
